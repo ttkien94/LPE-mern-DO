@@ -1,0 +1,23 @@
+.wrapper-courseItem-offline {
+  &_bg {
+    height: 200px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+
+    transition: filter 200ms linear, transform 200ms linear;
+  }
+
+  &_name {
+    color: #333;
+    font-size: 18px;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,40 @@
+.blog-list {
+  .blog-header-2 {
+    h2 {
+      display: inline-block;
+    }
+    p {
+      display: inline;
+      position: absolute;
+      right: 15px;
+    }
+
+    .box {
+      display: flex;
+      width: 100%;
+      height: 4px;
+      margin: 5px 0px 60px 0px;
+      .box-sm {
+        height: 4px;
+        margin: 0;
+        flex-grow: 1;
+        transition: all 0.8s ease-in-out;
+        cursor: pointer;
+      }
+
+      // Growing the width of box, when hover using flex-grow property
+      .box-sm:hover {
+        flex-grow: 12;
+      }
+      .blue {
+        background-color: #0089d7;
+      }
+      .gray {
+        background-color: rgba(0, 0, 0, 0.1);
+      }
+    }
+  }
+  .lpe-blog-small__img {
+    height: 150px;
+  }
+}

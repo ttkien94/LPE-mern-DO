@@ -1,0 +1,44 @@
+@import "/src/assets/styles/common.scss";
+.ph {
+  background-image: linear-gradient(to bottom, #7bfe91, #56e742);
+
+  img {
+    margin: auto;
+  }
+  .courseTitle {
+    background-color: white;
+    width: 100%;
+    text-transform: uppercase;
+    text-align: center;
+    color: black;
+    text-shadow: 0 0 20px #7bfe91;
+    border: transparent;
+    font-style: italic;
+    margin-bottom: 0;
+    padding-bottom: 10px;
+  }
+  .boxgreen {
+    border-radius: 50px 50px;
+    border: 1px solid;
+    box-shadow: 4px 5px #53ab4b;
+    background: #53ab4b;
+    padding: 30px;
+    margin: 0;
+    text-align: justify;
+    color: white;
+  }
+  iframe {
+    width: 100%;
+  }
+  p {
+    margin-bottom: 10px;
+  }
+  .contentObject {
+    position: absolute;
+    bottom: 35px;
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 30px;
+    color: white;
+  }
+}

@@ -1,0 +1,48 @@
+.par {
+  background: linear-gradient(180deg, #fbc8b8, rgba(220, 34, 131, 1) 100%);
+  .courseTitle {
+    text-shadow: 0 0 20px gray;
+  }
+
+  iframe {
+    width: 100%;
+  }
+
+  .boxShadow {
+    box-shadow: 5px 5px 5px 5px;
+    border-radius: 25px;
+  }
+  ul {
+    margin-left: 15px;
+    li {
+      margin-top: 15px;
+    }
+  }
+  h3 {
+    color: blue;
+  }
+  .headerLinear {
+    margin: auto;
+    text-align: center;
+    color: white;
+    padding: 20px;
+    background-image: linear-gradient(
+      to right,
+      transparent,
+      #ec2181,
+      #9b288f,
+      #3f308f,
+      transparent
+    );
+  }
+  .boxLinear {
+    padding: 20px;
+    border-radius: 30px;
+    background-image: linear-gradient(to bottom, #3f308f, #9b288f, #ec2181);
+    color: white;
+    h3 {
+      color: white;
+      text-align: center;
+    }
+  }
+}

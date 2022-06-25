@@ -1,0 +1,37 @@
+@import "assets/styles/common.scss";
+// Imports
+
+// Varibles
+$main-font: "Roboto", sans-serif;
+$primary-color: #57e2b2;
+$light-gray: #f8f8f8;
+$main-font-color: #808080;
+$main-font-weight: 300;
+
+// Basic
+.pricing {
+  background-color: $light-gray;
+  font-family: $main-font;
+  font-weight: $main-font-weight;
+}
+
+.wrapper-card {
+  .card-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .card-shadow {
+      border-radius: 30px;
+    }
+
+    .img {
+      width: 300px;
+    }
+  }
+}
+
+@media screen and(max-width: 768px) {
+  .card-item {
+    margin: 20px 0;
+  }
+}

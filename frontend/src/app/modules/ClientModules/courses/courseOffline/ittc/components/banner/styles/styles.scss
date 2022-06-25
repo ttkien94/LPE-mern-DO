@@ -1,0 +1,130 @@
+.ittc_banner {
+  position: relative;
+  // background-color: #000;
+  color: #fff;
+  height: 100vh;
+  overflow: hidden;
+
+  &-img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      width: 60% !important;
+    }
+  }
+
+  &-text {
+    position: absolute;
+    top: 60%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    width: 60% !important;
+
+    p {
+      margin-bottom: 0;
+    }
+
+    &-title {
+      font-size: 35px;
+      letter-spacing: 1rem;
+      font-family: "Montserrat", sans-serif;
+    }
+
+    &-inner {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+    }
+
+    &-en {
+      font-size: 23px;
+    }
+
+    &-en-big {
+      font-size: 30px;
+      margin-right: 3px;
+      font-family: "Montserrat", sans-serif;
+    }
+
+    &-big {
+      font-size: 80px;
+    }
+
+    &-long {
+      font-family: "Montserrat", sans-serif;
+      font-size: 40px;
+      margin-bottom: 0;
+      letter-spacing: 0.4rem;
+      background: -webkit-linear-gradient(
+        45deg,
+        #ae8625,
+        #f7ef8a,
+        #d2ac47,
+        #edc967
+      );
+      background: -moz-linear-gradient(
+        45deg,
+        #ae8625,
+        #f7ef8a,
+        #d2ac47,
+        #edc967
+      );
+      background: linear-gradient(45deg, #ae8625, #f7ef8a, #d2ac47, #edc967);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .ittc_banner-img {
+    img {
+      width: 90% !important;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .ittc_banner {
+    &-text {
+      &-title {
+        font-size: 25px;
+      }
+      &-en {
+        font-size: 18px;
+      }
+
+      &-en-big {
+        font-size: 23px;
+      }
+
+      &-big {
+        font-size: 50px;
+      }
+
+      &-long {
+        font-size: 30px;
+        margin-bottom: 0;
+        letter-spacing: 0.4rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .ittc_banner-text {
+    width: 80% !important;
+    left: 50%;
+    top: 70%;
+  }
+
+  .ittc_banner-text-long {
+    font-size: 25px;
+  }
+}

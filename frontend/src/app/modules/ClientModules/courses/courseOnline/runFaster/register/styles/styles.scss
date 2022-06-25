@@ -1,0 +1,107 @@
+.bg-color {
+    background: linear-gradient(45deg, #f39c12, #f1c40f);
+    height: 100vh;
+    position: relative;
+}
+
+.form-container {
+    // center form
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    margin: 0 auto;
+
+    // Color background
+    background: #fff;
+    width: 650px;
+    padding: 20px 40px;
+    border-radius: 16px;
+
+    .heading-form {
+        color: #f39c12;
+        text-transform: uppercase;
+        font-size: 30px;
+    }
+
+    .desc-text {
+        font-size: 17px;
+        margin: 0;
+
+    }
+
+    .input-container {      
+        label {
+            font-size: 18px;
+            margin-top: 10px;
+        }  
+        p {
+            padding: 0;
+            margin: 0;
+            margin-top: 5px;
+            color: #1877f2
+        }
+
+        input,textarea {
+            display: flex;
+            width: 100%;
+            height: 50px;
+            padding: 10px;
+            border-radius: 6px;
+            outline: unset;
+            border: 2px solid #ccc;
+            &:focus {
+                border-color: #1876f288;
+                box-shadow: 0 0 0 2px #e7f3ff;
+                caret-color: #1877f2;
+            }
+        }
+        textarea {
+            height: 100px;
+        }
+
+        
+    }
+
+    button {
+        color: #fff;
+        background-color: #f39c12;
+        padding: 15px 20px;
+        font-size: 16px;
+        text-transform: uppercase;
+        outline: unset;
+        border: none;
+        margin-top: 20px;
+        float: right;
+        transition: all .3s;
+
+        &:hover {
+            background: #f1c40f!important;
+        }
+    }
+
+}
+
+@media screen and (max-width: 992px) {
+    .bg-color {
+        background: #fff;
+        display: none;
+    }
+    .form-container {
+        border-radius: 0;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        width: 70%;
+        padding: 30px 20px;
+        position: unset;
+        transform: unset;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .form-container {
+        width: 100%;
+    }
+}

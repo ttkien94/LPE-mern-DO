@@ -1,0 +1,28 @@
+$color-text: #0f0a64;
+$color-secondary: #9eacc7;
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+
+.courseOnline-page {
+  .heading {
+    &-text {
+      font-weight: 500;
+      padding-top: 100px;
+      padding-bottom: 10px;
+      color: $color-text;
+      // font-family: "Poppins", sans-serif;
+      letter-spacing: 0.08rem;
+    }
+
+    &-desc {
+      color: $color-secondary;
+      font-size: 18px;
+      font-weight: bold;
+      // font-family: "Poppins", sans-serif;
+    }
+  }
+
+  .margin-custom {
+    margin-top: 80px !important;
+  }
+}

@@ -1,0 +1,107 @@
+$breakpoints: (
+  "extra-large": 1280px,
+  "medium-large": 1024px,
+  "large": 992px,
+  "medium": 768px,
+  "small": 640px,
+  "extra-small": 480px,
+);
+
+@mixin backgroundStyle($height) {
+  height: $height;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+@mixin overlay($bgColor, $height) {
+  background-color: $bgColor;
+  height: $height;
+}
+
+@mixin centerXYPosition {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin responsiveScreen($screen) {
+  //Kiểm tra screen có tồn tại trong breakpoint hay không
+  @if (map-has-key($map: $breakpoints, $key: $screen)) {
+    //Nếu tìm thấy thì lấy giá trị của $screent gán cho $value
+    $value: map-get(
+      $map: $breakpoints,
+      $key: $screen,
+    );
+
+    @media screen and (max-width: $value) {
+      @content;
+    }
+  } @else {
+    @warn 'Screen không tồn tại';
+  }
+}
+.banner {
+  .overlay-banner {
+    @include overlay($bgColor: rgba(0, 0, 0, 0.4), $height: 100%);
+  }
+
+  .intro-text {
+    @include centerXYPosition;
+    text-align: center;
+    color: #fff;
+    width: 100%;
+
+    h4 {
+      font-size: 58px;
+      font-weight: 700;
+      line-height: 5rem;
+      text-align: center;
+    }
+
+    p {
+      font-size: 22px;
+      font-weight: 600;
+      line-height: 32px;
+    }
+  }
+}
+
+.bgHeading {
+  position: relative;
+  @include backgroundStyle($height: 750px);
+}
+
+@include responsiveScreen("large") {
+  .bgHeading {
+    .intro-text {
+      padding: 0 20px;
+      h4 {
+        font-size: 40px;
+        line-height: 3rem;
+      }
+
+      p {
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+@include responsiveScreen("small") {
+  .bgHeading {
+    .intro-text {
+      h4 {
+        font-size: 30px;
+        line-height: 3rem;
+      }
+
+      p {
+        font-size: 18px;
+      }
+    }
+  }
+}

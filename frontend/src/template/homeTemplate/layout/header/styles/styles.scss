@@ -1,0 +1,241 @@
+@import "assets/styles/common.scss";
+
+.headerContent {
+  display: flex;
+  justify-content: space-between;
+  height: 60px;
+  padding: 5px;
+  background-color: $white-0;
+  color: $black-0;
+}
+
+.header-dropdown {
+  li:hover {
+    background: #457fca; /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+      to right,
+      #5691c8,
+      #457fca
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+      to right,
+      #5691c8,
+      #457fca
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    transition: all 0.3s;
+
+    > a {
+      color: $white-0 !important;
+    }
+  }
+  li:hover > ul {
+    display: block;
+    transition: all 0.6s;
+  }
+}
+
+.imgLogo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 60%;
+  max-height: 60%;
+}
+
+.header-dropdown {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  width: 70%;
+  justify-content: space-around;
+}
+
+.header-dropdown li {
+  position: relative;
+}
+
+.header-dropdown li a {
+  color: $black-0 !important;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  padding: 10px;
+  transition: all 0.3s;
+}
+
+.header-dropdown li ul {
+  background: #457fca; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #5691c8,
+    #457fca
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #5691c8,
+    #457fca
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  position: absolute;
+  top: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: none;
+  line-height: normal;
+  min-width: 160px;
+  transition: all 0.3s;
+}
+
+.header-dropdown li ul li a {
+  text-align: left;
+  font-size: 14px;
+  padding: 15px;
+  display: block;
+  white-space: nowrap;
+  word-spacing: 2px;
+}
+
+.header-dropdown li ul li a:hover {
+  background-color: #000;
+  color: $white-0 !important;
+}
+
+.header-dropdown li ul li ul {
+  left: 100%;
+  top: 0;
+  transition: all 0.6s;
+}
+
+.appLeftLg {
+  display: flex;
+  align-items: center;
+}
+
+.searchIcon,
+.cartIcon {
+  cursor: pointer;
+  width: 2em !important;
+  height: 2em !important;
+  padding: 6px;
+  transition: all 0.5s;
+  color: $black-0;
+
+  margin-right: 10px;
+  &:hover {
+    color: $blue-1;
+  }
+}
+
+.popOver {
+  display: flex;
+  flex-direction: column;
+}
+
+.contentTranslation {
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+
+  img {
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.contentTranslationPopover {
+  img {
+    width: 50px;
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #333;
+    transition: all 0.3s;
+    cursor: pointer;
+
+    &:hover {
+      color: #adb5bd;
+    }
+  }
+}
+
+.appLeftSm {
+  display: none;
+}
+
+.menuItem {
+  cursor: pointer;
+
+  &:hover {
+    background: unset !important;
+    a {
+      color: unset !important;
+
+      i {
+        color: default !important;
+      }
+    }
+  }
+
+  a {
+    padding: 15px 20px;
+    display: block;
+    width: 100%;
+    font-size: 20px;
+    color: #273167;
+    i {
+      color: #3777bc;
+    }
+  }
+
+  &Active {
+    background: #eff3ff;
+
+    &:hover {
+      background: #eff3ff !important;
+      a {
+        color: unset !important;
+
+        i {
+          color: default !important;
+        }
+      }
+    }
+
+    a {
+      padding: 15px 20px;
+      display: block;
+      width: 100%;
+      font-size: 20px;
+      color: #273167;
+      i {
+        color: #3777bc;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1082px) {
+  .header-dropdown {
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .header-dropdown {
+    display: none;
+  }
+  .appLeftLg {
+    display: none !important;
+  }
+  .appLeftSm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,25 @@
+delete  http://localhost:5000/blog/delete-post
+Content-Type: application/json
+
+
+{
+    blog:{
+        "blogStatus": false,
+        "cover": "https://lpe.vn/api/public\\images\\blog\\1647820356356_findus.png",
+        "createdAt": "2022-03-20T23:52:36.597Z",
+        "spotlight": false,
+        "__v": 0,
+        "_id": "6237b939a8c921456ca22363"
+        }
+}
+
+###
+
+
+GET  http://localhost:5000/blog/post2
+Content-Type: application/json
+
+{
+    "username": "admin",
+    "password":"admin"
+}

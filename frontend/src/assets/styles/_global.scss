@@ -1,0 +1,443 @@
+// default
+.flex-alignitem {
+  display: flex;
+  align-items: center;
+}
+.register {
+  font-size: 30px;
+  background: #f7941e;
+  border-radius: 50px;
+  padding: 10px 20px 10px 20px;
+  color: white;
+  box-shadow: black 5px 5px 35px 0px;
+  margin: auto;
+}
+.courseTitle {
+  background-color: white;
+  width: 100%;
+  text-transform: uppercase;
+  text-align: center;
+  color: black;
+  text-shadow: 0 0 20px orange;
+  border: transparent;
+  font-style: italic;
+  margin-bottom: 0;
+  padding-bottom: 10px;
+}
+.visible-sm-xs {
+  display: none !important;
+}
+@media (max-width: 768px) {
+  .order-last {
+    order: unset;
+  }
+  .hidden-sm-xs {
+    display: none !important;
+  }
+  .visible-sm-xs {
+    display: block !important;
+  }
+}
+header {
+  padding: 0 !important;
+}
+
+// ::-webkit-scrollbar {
+//   width: 6px;
+// }
+
+// /* Track */
+// ::-webkit-scrollbar-track {
+//   background: $white-0;
+// }
+
+// /* Handle */
+// ::-webkit-scrollbar-thumb {
+//   background: $black-0;
+// }
+
+// style arrow color
+polygon {
+  fill: $white-0;
+}
+​
+
+// MenuBar
+ul li:hover > a {
+  background-color: $black-0 !important;
+  color: $white-0 !important;
+  transition: all 0.6s;
+}
+
+@media screen and (max-width: 992px) {
+  .MuiDrawer-root {
+    .MuiDrawer-paper.MuiDrawer-paperAnchorRight {
+      width: 50% !important;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .MuiDrawer-root {
+    .MuiDrawer-paper.MuiDrawer-paperAnchorRight {
+      width: 70% !important;
+    }
+  }
+}
+@media screen and (max-width: 400px) {
+  .MuiDrawer-root {
+    .MuiDrawer-paper.MuiDrawer-paperAnchorRight {
+      width: 100% !important;
+    }
+  }
+}
+
+.MuiAccordionDetails-root {
+  padding: 0 !important;
+  display: block !important;
+  border-bottom: none !important;
+}
+
+// Carousel code
+.slider {
+  min-height: 100vh;
+}
+
+[not-existing] {
+  zoom: 1;
+}
+
+lesshat-selector {
+  -lh-property: 0;
+}
+
+.loader {
+  border: 3px solid $gray-0;
+  border-top: 3px solid $blue-1; /* Blue */
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  animation: spin 2s linear infinite;
+  margin-right: 5px;
+
+  &.image {
+    width: 60px;
+    height: 60px;
+    border: 5px solid $gray-0;
+    border-top: 5px solid $blue-1;
+    border-bottom: 5px solid $blue-1;
+    border-radius: 50%;
+    animation: spin 0.5s linear infinite;
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.wrapper-toast {
+  display: flex;
+  align-items: center;
+  color: $black-text;
+}
+
+.Toastify__toast--success {
+  background: $gray-1 !important;
+  border-left: 4px solid $green-0;
+
+  i {
+    margin-right: 10px;
+    color: $green-0;
+    font-size: 20px;
+  }
+}
+
+.Toastify__toast--error {
+  background: #f3f3f3 !important;
+  border-left: 4px solid $red-0;
+
+  i {
+    margin-right: 10px;
+    color: $red-0;
+    font-size: 20px;
+  }
+}
+
+.Toastify__toast--warning {
+  background: #f3f3f3 !important;
+  border-left: 4px solid $yellow-0;
+  i {
+    margin-right: 10px;
+    color: $yellow-0;
+    font-size: 20px;
+  }
+}
+
+.profileBox {
+  padding: 30px;
+  border-radius: 15px;
+  background: $white-0;
+}
+
+.MuiAccordion-root.Mui-expanded {
+  margin: 0 !important;
+}
+
+.wrapper-accordion {
+  overflow: hidden;
+  transition: all 0.3s;
+}
+
+.accordion-title {
+  // background-color: #dfe8f6;
+  color: $blue-1;
+  font-weight: bold;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 10px 20px;
+}
+
+@media screen and (max-width: 1199px) {
+  .profileBox {
+    padding: 30px 10px;
+  }
+}
+
+.hotline-phone-ring-wrap {
+  position: fixed;
+  bottom: -20px;
+  left: 0;
+  z-index: 999;
+}
+.hotline-phone-ring {
+  position: relative;
+  visibility: visible;
+  background-color: transparent;
+  width: 110px;
+  height: 110px;
+  cursor: pointer;
+  z-index: 11;
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: translateZ(0);
+  transition: visibility 0.5s;
+  left: 0;
+  bottom: 0;
+  display: block;
+}
+.hotline-phone-ring-circle {
+  width: 85px;
+  height: 85px;
+  top: 10px;
+  left: 10px;
+  position: absolute;
+  background-color: transparent;
+  border-radius: 100%;
+  border: 2px solid $blue-1;
+  -webkit-animation: phonering-alo-circle-anim 1.2s infinite ease-in-out;
+  animation: phonering-alo-circle-anim 1.2s infinite ease-in-out;
+  transition: all 0.5s;
+  -webkit-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  opacity: 0.5;
+}
+.hotline-phone-ring-circle-fill {
+  width: 55px;
+  height: 55px;
+  top: 25px;
+  left: 25px;
+  position: absolute;
+  background-color: $blue-1;
+  border-radius: 100%;
+  border: 2px solid transparent;
+  -webkit-animation: phonering-alo-circle-fill-anim 2.3s infinite ease-in-out;
+  animation: phonering-alo-circle-fill-anim 2.3s infinite ease-in-out;
+  transition: all 0.5s;
+  -webkit-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+}
+.hotline-phone-ring-img-circle {
+  background-color: $blue-1;
+  width: 33px;
+  height: 33px;
+  top: 37px;
+  left: 37px;
+  position: absolute;
+  background-size: 20px;
+  border-radius: 100%;
+  border: 2px solid transparent;
+  -webkit-animation: phonering-alo-circle-img-anim 1s infinite ease-in-out;
+  animation: phonering-alo-circle-img-anim 1s infinite ease-in-out;
+  -webkit-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hotline-phone-ring-img-circle .pps-btn-img {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.hotline-phone-ring-img-circle .pps-btn-img svg {
+  width: 20px;
+  height: 20px;
+  color: #fff;
+}
+.hotline-bar {
+  position: absolute;
+  background: $blue-1;
+  height: 40px;
+  width: 180px;
+  line-height: 40px;
+  border-radius: 3px;
+  padding: 0 10px;
+  background-size: 100%;
+  cursor: pointer;
+  transition: all 0.8s;
+  -webkit-transition: all 0.8s;
+  z-index: 9;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 50px !important;
+  /* width: 175px !important; */
+  left: 33px;
+  bottom: 37px;
+}
+.hotline-bar > a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: bold;
+  text-indent: 50px;
+  display: block;
+  letter-spacing: 1px;
+  line-height: 40px;
+  font-family: Arial;
+}
+.hotline-bar > a:hover,
+.hotline-bar > a:active {
+  color: #fff;
+}
+@-webkit-keyframes phonering-alo-circle-anim {
+  0% {
+    -webkit-transform: rotate(0) scale(0.5) skew(1deg);
+    -webkit-opacity: 0.1;
+  }
+  30% {
+    -webkit-transform: rotate(0) scale(0.7) skew(1deg);
+    -webkit-opacity: 0.5;
+  }
+  100% {
+    -webkit-transform: rotate(0) scale(1) skew(1deg);
+    -webkit-opacity: 0.1;
+  }
+}
+@-webkit-keyframes phonering-alo-circle-fill-anim {
+  0% {
+    -webkit-transform: rotate(0) scale(0.7) skew(1deg);
+    opacity: 0.6;
+  }
+  50% {
+    -webkit-transform: rotate(0) scale(1) skew(1deg);
+    opacity: 0.6;
+  }
+  100% {
+    -webkit-transform: rotate(0) scale(0.7) skew(1deg);
+    opacity: 0.6;
+  }
+}
+@-webkit-keyframes phonering-alo-circle-img-anim {
+  0% {
+    -webkit-transform: rotate(0) scale(1) skew(1deg);
+  }
+  10% {
+    -webkit-transform: rotate(-25deg) scale(1) skew(1deg);
+  }
+  20% {
+    -webkit-transform: rotate(25deg) scale(1) skew(1deg);
+  }
+  30% {
+    -webkit-transform: rotate(-25deg) scale(1) skew(1deg);
+  }
+  40% {
+    -webkit-transform: rotate(25deg) scale(1) skew(1deg);
+  }
+  50% {
+    -webkit-transform: rotate(0) scale(1) skew(1deg);
+  }
+  100% {
+    -webkit-transform: rotate(0) scale(1) skew(1deg);
+  }
+}
+.relative {
+  width: 100%;
+  position: relative;
+  display: inline-block;
+}
+.center-left {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+@media (max-width: 768px) {
+  .hotline-bar {
+    display: none;
+  }
+  .relative {
+    width: unset;
+  }
+  .center-left {
+    position: unset;
+    transform: unset;
+  }
+}
+
+.ReactModal__Overlay.ReactModal__Overlay--after-open {
+  z-index: 999999 !important;
+}
+
+.slick-thumb {
+  bottom: -80px !important;
+
+  li {
+    width: 64px;
+    height: 64px;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+
+    &.slick-active {
+      img {
+        filter: brightness(50%) !important;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .slick-thumb {
+    li {
+      width: 50px;
+      height: 50px;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}

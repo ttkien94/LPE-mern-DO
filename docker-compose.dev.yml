@@ -1,0 +1,76 @@
+# Phiên bản file docker-compose
+version: "3"
+
+# Tất cả services sẽ được khai báo ở đây
+services:
+  # mongoDb: #Tên service
+  #   image: mongo #Lấy phiên bản mongodb mới nhất tại from hub.docker.com
+  #   restart: always # Service sẽ chạy liên tục và không dừng cho đến khi dừng lại
+  #   environment: # Khai báo tên người dùng và mật khẩu cho mongoDB
+  #     - MONGO_INITDB_ROOT_USERNAME=root
+  #     - MONGO_INITDB_ROOT_PASSWORD=example
+  #   # Trong môi trường docker dữ liệu sẽ không tồn tại lâu dài, vì vậy sử dụng volumns để duy trì dữ liệu
+  #   # volumes được quản lý bới docker và nó là bộ nhớ lâu dài
+  #   volumes:
+  #     - db-volume:/data/db
+
+  # # mongo-experss Là một option, có thể bỏ qua nếu muốn
+  # mongo-express:
+  #   image: mongo-express
+  #   restart: always
+  #   # Services đang chạy bên trong docker, không thể truy vập nó từ môi trường bên ngoài
+  #   # Vì vậy để truy xuất từ môi trường bên ngoài
+  #   # Ta cần PORT để truy xuất nó từ bên ngoài
+  #   # Ví dụ, Ta có thể truy cập mongo-express từ bên ngoài docker-environemnt Khi nhập url này trên localhost:8081
+  #   # Bới vì PORT 8081 được map với PORT 8081 chạy bên trong docker-container
+  #   # Có thể thay đổi nó thành 8080:8081, Bây giờ bạn cần truy cập localhost:8080 bởi vì đã map với 8081 port với PORT 8080
+  #   ports:
+  #     - 8081:8081
+  #   environment:
+  #     ME_CONFIG_MONGODB_ADMINUSERNAME: root
+  #     ME_CONFIG_MONGODB_ADMINPASSWORD: example
+  #     # Đường dẫn này có nghĩa, khi bạn muốn kết nối bên trong container với một container khác mà không để lộ PORT
+  #     # container service name và port mà nó đang chạy
+  #     ME_CONFIG_MONGODB_URL: mongodb://root:example@mongoDb:27017/
+
+  backend:
+    build: # Dựng image lên
+      context: ./backend #Vị trí thư mục
+      dockerfile: Dockerfile.dev # Tên dockerfile
+    volumes:
+      - /app/node_modules
+      - ./backend:/app
+    environment:
+      # URL này có nghĩa, khi bạn muốn kết nối bên trong container với một container khác mà không để lộ PORT
+      # container service name và port mà nó đang chạy
+      - MONGODB_URI=mongodb://root:example@mongoDb:27017/dockerizingMernApplicationTestDB?authSource=admin
+      - CHOKIDAR_USEPOLLING=true #for hot reloading
+
+    depends_on: # Không chạy cho đến khi mongoDB bắt đầu
+      - mongoDb
+    restart: always
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile.dev
+    volumes:
+      - /app/node_modules # Ta tham chiếu tới node_modules mà được tạo bên trong docker, đến node_modules hiện tại có trong thư mục frontend
+      - ./frontend:/app # đường dẫn frontend được sử dụng như volume(bind mount)
+
+    environment:
+      # Yêu cầu sẽ chuyển về cùng url, Vì thế ta chỉ cần /api để Nginx phân biệt yêu cầu này đến backend
+      - REACT_APP_BACKEND_URL=/api
+      - CHOKIDAR_USEPOLLING=true
+
+  nginx:
+    build:
+      context: ./nginx
+      dockerfile: Dockerfile.dev
+    ports:
+      - 3000:80
+    restart: always
+
+    # volumes are defined here
+volumes:
+  db-volume:

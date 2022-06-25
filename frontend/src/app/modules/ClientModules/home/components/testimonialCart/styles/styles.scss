@@ -1,0 +1,84 @@
+$color-primary: #e74c3c;
+$bg-color-name: #6bc63e;
+$bg-color-text: #e9e9e9;
+
+.tes-border {
+  background: #fff;
+  transition: all 0.3s;
+  background: $bg-color-text;
+  text-align: center;
+
+  position: relative;
+
+  &:hover {
+    cursor: grab;
+    // box-shadow: 0 15px 25px rgba(168, 96, 0, 0.1);
+  }
+
+  // .tes-rating {
+  //   padding-bottom: 20px;
+  //   color: $color-primary;
+  //   font-size: 18px;
+  // }
+
+  .tes-hero {
+    font-size: 15px;
+    padding: 15px 20px;
+    margin-bottom: 20px;
+    height: 300px;
+  }
+
+  .tes-name {
+    font-size: 18px;
+    font-weight: bold;
+
+    background: $bg-color-name;
+    padding: 15px;
+    border-radius: 10px;
+    color: #fff !important;
+    margin-bottom: 0;
+
+    .tes-job {
+      padding: 5px;
+      margin: 0;
+      font-size: 14px;
+    }
+  }
+
+  .img-ava {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    bottom: -15%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .tes-border {
+    margin-bottom: 50px !important;
+  }
+  .tes-hero {
+    height: 350px !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .tes-card {
+    margin-bottom: 20px;
+  }
+
+  .tes-hero {
+    height: fit-content !important;
+    margin-bottom: 0 !important;
+  }
+
+  .img-ava {
+    position: unset !important;
+    transform: unset !important;
+    margin: 0 auto;
+    padding: 10px;
+  }
+}

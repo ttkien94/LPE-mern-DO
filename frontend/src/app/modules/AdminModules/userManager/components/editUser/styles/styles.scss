@@ -1,0 +1,64 @@
+.admin-user-screen {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+
+  // .MuiFormControl-root {
+  //   width: 100% !important;
+  //   margin: 20px 0;
+
+  //   & > label {
+  //     font-weight: bold;
+  //     color: #333;
+  //     top: -18px;
+  //   }
+
+  //   & > label + .MuiOutlinedInput-root {
+  //     border: 1px solid #dbeaf5 !important;
+  //     border-radius: 5px;
+  //     margin-top: 10px;
+  //   }
+
+  //   & > label + .MuiInput-formControl:before {
+  //     display: none;
+  //   }
+
+  //   &:focus > label + .MuiInput-formControl:before {
+  //     display: none;
+  //   }
+
+  //   & .MuiInputLabel-shrink {
+  //     transform: unset;
+  //     transform-origin: unset;
+  //   }
+  // }
+}
+
+.admin-user-screen {
+  .heading-title {
+    text-align: center;
+    padding: 20px 0;
+    font-size: 24px;
+  }
+
+  .avatar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+    }
+  }
+
+  .wrapper-btn-group {
+    display: flex;
+
+    .cancelbtn {
+      margin-left: 20px;
+    }
+  }
+}

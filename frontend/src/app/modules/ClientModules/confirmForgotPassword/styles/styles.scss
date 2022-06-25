@@ -1,0 +1,80 @@
+$p-left: 24px;
+$p-t-b: 10px;
+$border-radius: 10px;
+
+.submitForgetContainer {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+
+  flex-direction: column;
+  background-color: #f0f2f5;
+
+  .formContainer {
+    background-color: #fff;
+    padding: $p-t-b 0;
+    border-radius: $border-radius;
+    -webkit-border-radius: $border-radius;
+    -moz-border-radius: $border-radius;
+    -ms-border-radius: $border-radius;
+    -o-border-radius: $border-radius;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    max-width: 400px;
+    padding: 20px;
+  }
+}
+
+.formHeading {
+  padding-top: $p-t-b;
+  padding-bottom: $p-t-b;
+  padding-left: $p-left;
+  text-align: left;
+  border-bottom: 1px solid #d8d8d8;
+  font-weight: bold;
+}
+
+.descText {
+  padding: $p-t-b $p-left;
+  padding-top: 20px;
+  margin: 0;
+  font-size: 17px;
+  line-height: 20px;
+  text-align: left;
+}
+.wrapperButton {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.formContainerForget {
+  background-color: #fff;
+  padding: $p-t-b 0;
+  border-radius: $border-radius;
+  -webkit-border-radius: $border-radius;
+  -moz-border-radius: $border-radius;
+  -ms-border-radius: $border-radius;
+  -o-border-radius: $border-radius;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+@media screen and (max-width: 992px) {
+  .submitForgetContainer {
+    height: unset;
+
+    .formContainer {
+      border-radius: unset !important;
+      width: 100%;
+      max-width: unset !important;
+    }
+  }
+
+  .formContainerForget {
+    height: unset;
+    width: 100%;
+    border-radius: unset !important;
+    max-width: unset !important;
+  }
+}

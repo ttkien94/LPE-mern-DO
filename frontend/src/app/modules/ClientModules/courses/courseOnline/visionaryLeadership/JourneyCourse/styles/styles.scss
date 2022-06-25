@@ -1,0 +1,169 @@
+@import "assets/styles/common.scss";
+
+// .journeyCourse{
+//     text-align:center;
+//     margin-top:30px;
+// }
+
+$border: 1px solid #4d4d4d;
+
+.journeyCourse {
+  text-align: center;
+  margin-top: 30px;
+  background: #25252d;
+  color: white;
+  margin: 0;
+  padding: 0;
+  .accordion.active {
+    .accordion-title {
+      color: white !important;
+    }
+  }
+  .accordion-title {
+    color: black !important;
+    font-weight: normal;
+  }
+  main {
+    padding: 2rem;
+    max-width: 1400px;
+    margin: auto;
+  }
+
+  h2 {
+    font-weight: 500;
+    text-align: center;
+  }
+
+  h3 {
+    font-weight: 500;
+    margin: 0.5rem 0;
+  }
+
+  .grid-wrapper {
+    text-align: justify;
+    // Adding grid layout for screen size above 600
+    @media screen and (min-width: 600px) {
+      display: grid;
+      grid-auto-flow: column;
+      grid-gap: 1rem;
+    }
+
+    @media screen and (min-width: 1025px) {
+      grid-template-columns: 1fr 2fr 1fr 2fr;
+    }
+    @media screen and (min-width: 600px) and (max-width: 1024px) {
+      grid-template-columns: 1fr 2fr;
+    }
+  }
+
+  article {
+    p {
+      font-family: "Karla", sans-serif;
+      font-size: 0.95rem;
+      color: #c8c8c8;
+    }
+    padding-bottom: 1rem;
+
+    // using Grid area to place the 4th and 8th element.
+    &:nth-child(1) {
+      grid-area: 1/1/2/3;
+    }
+    &:nth-child(6) {
+      grid-area: 2/2/6/3;
+    }
+    &:nth-child(7) {
+      grid-area: 1/3/2/-1;
+      @media screen and (min-width: 500px) and (max-width: 1024px) {
+        grid-area: 7/1/6/3;
+      }
+    }
+    &:nth-child(12) {
+      @media screen and (min-width: 1025px) {
+        grid-area: 2/4/6/-1;
+      }
+      @media screen and (min-width: 500px) and (max-width: 1024px) {
+        grid-area: 11/2/7/2;
+      }
+    }
+
+    &:nth-child(6n + 5) {
+      @media screen and (min-width: 1025px) {
+        border-bottom: 0;
+      }
+    }
+    &:nth-child(6) {
+      @media screen and (min-width: 1025px) {
+        border-right: $border;
+        padding-right: 1rem;
+      }
+    }
+    &:nth-child(6n) {
+      @media screen and (min-width: 600px) {
+        border-left: $border;
+        border-bottom: 0;
+        padding-left: 1rem;
+      }
+    }
+  }
+  .video {
+    margin-bottom: 30px;
+    iframe {
+      min-height: 315px;
+      width: 100%;
+    }
+  }
+
+  @media screen and (min-width: 992px) {
+    .video {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      iframe {
+        width: 50%;
+      }
+    }
+  }
+}
+
+.button-day {
+  color: #fff;
+  border: none;
+  background-color: #25252d;
+  border: 1px solid #cbbd8c;
+  border-radius: 50%;
+  height: 60px;
+  width: 60px;
+  font-weight: bold;
+  transition: all 0.3s;
+
+  &:hover {
+    background-color: #cbbd8c;
+    color: #000;
+    border: 1px solid #cbbd8c;
+  }
+
+  &.active {
+    background-color: #cbbd8c;
+    color: #000;
+    border: 1px solid #cbbd8c;
+  }
+}
+
+.wrapper-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0;
+
+  p {
+    text-align: left;
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .wrapper-text {
+    margin-top: 20px;
+  }
+}

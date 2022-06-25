@@ -1,0 +1,32 @@
+@import "/src/assets/styles/common.scss";
+.graduate {
+  color: black;
+  background-image: linear-gradient(to bottom, white, #ead6b1, #c4965d);
+
+  ul {
+    margin-left: 15px;
+    li {
+      margin-bottom: 10px;
+    }
+  }
+
+  iframe {
+    width: 100%;
+  }
+  .background {
+    background: url("https://lpe.vn/img/lpe/chuong-trinh-huan-luyen/offline/graduate/10-2.png");
+    background-size: cover;
+    color: white;
+  }
+  .background2 {
+    background: url("https://lpe.vn/img/lpe/chuong-trinh-huan-luyen/offline/graduate/10-3.png");
+    background-size: cover;
+    color: white;
+    text-align: left !important;
+    padding: 10px 0;
+    h3 {
+      margin-bottom: 0;
+      margin-left: 15px;
+    }
+  }
+}

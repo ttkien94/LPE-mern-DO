@@ -1,0 +1,57 @@
+@import "assets/styles/common.scss";
+
+.wrapperFooter {
+  background: url("https://i1.wp.com/demo4.drfuri.com/razzi3/wp-content/uploads/sites/17/2021/06/bg-1.jpg?ssl=1");
+  padding-top: 70px;
+
+  color: $white-0;
+
+  .heading {
+    font-size: 20px;
+    margin-bottom: 20px;
+    font-weight: 600;
+  }
+
+  .heading2 {
+    font-size: 20px;
+    margin-top: 30px;
+    font-weight: 600;
+  }
+
+  p {
+    font-size: 15px;
+    margin-bottom: 10px;
+  }
+}
+
+.itemMenu {
+  font-size: 15px;
+  margin-bottom: 10px;
+
+  &:hover {
+    background: unset !important;
+  }
+}
+
+.itemMenu a {
+  transition: color 0.3s;
+  color: $white-0;
+
+  &:hover {
+    color: $blue-0 !important;
+  }
+}
+
+.wrapperInfo {
+  background: transparent;
+  color: $white-0;
+  padding: 20px 0;
+  border-top: 1px solid #2b2b2b;
+  font-size: 12px;
+}
+
+@media screen and (max-width: 992px) {
+  .wrapperFooter {
+    padding: 50px 0;
+  }
+}

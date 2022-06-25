@@ -1,0 +1,84 @@
+@import "/src/assets/styles/common.scss";
+.ltc {
+  color: black;
+  background-image: linear-gradient(to bottom, #ffdca8, #ffdca8);
+
+  p {
+    margin-bottom: 10px;
+  }
+
+  iframe {
+    width: 100%;
+  }
+  .ltc-title {
+    padding: 10px;
+    color: white;
+    text-shadow: black 2px 2px 5px;
+    border-top: 5px solid;
+    border-bottom: 5px solid;
+    border-image: conic-gradient(
+        #470b00,
+        #470f00,
+        transparent,
+        transparent,
+        #470f00,
+        #470f00,
+        #470f00,
+        transparent,
+        transparent,
+        #470f00,
+        #470f00
+      )
+      1;
+    background-image: linear-gradient(
+      to right,
+      transparent,
+      #ff813a,
+      transparent
+    );
+  }
+  ul {
+    margin-left: 15px;
+    list-style-type: circle;
+  }
+  .boxBrown {
+    color: white;
+    background-image: linear-gradient(to right, #3d2616, #8a5d3c, #3d2616);
+    border-radius: 20px;
+    box-shadow: 2px 2px 2px 5px #8a5d3c;
+    padding: 15px;
+  }
+  .special {
+    background-image: linear-gradient(
+      to right,
+      transparent,
+      #744c29,
+      #744c29,
+      #744c29,
+      transparent
+    );
+    color: white;
+    border-top: 5px solid;
+    border-bottom: 5px solid;
+    padding: 15px 30px;
+    border-image: conic-gradient(
+        #ff813a,
+        #ff813a,
+        transparent,
+        transparent,
+        #ff813a,
+        #ff813a,
+        #ff813a,
+        transparent,
+        transparent,
+        #ff813a,
+        #ff813a
+      )
+      1;
+  }
+  .specialTitle {
+    width: 150px;
+    margin: auto;
+    margin-top: -40px;
+  }
+}

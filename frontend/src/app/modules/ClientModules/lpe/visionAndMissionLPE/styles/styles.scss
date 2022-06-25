@@ -1,0 +1,155 @@
+$primary-color: #d41982;
+$color-text: #d41982;
+$secondary-color: #6c757d;
+
+.vision-page {
+  .heading {
+    text-align: center;
+    color: $primary-color;
+    padding-top: 50px;
+    padding-bottom: 30px;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+
+  .subTitle {
+    color: $primary-color;
+    font-weight: 700;
+    font-size: 18px;
+  }
+
+  .quotes {
+    font-size: 22px;
+    position: relative;
+    text-transform: uppercase;
+    font-style: italic;
+    padding-top: 30px;
+
+    &::before {
+      content: "";
+      display: inline-block;
+      width: 15px;
+      height: 15px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: url("https://vingroup.net/assets/images/quote-1.png") 0 0/100%
+        no-repeat;
+    }
+
+    &::after {
+      content: "";
+      display: inline-block;
+      width: 15px;
+      height: 15px;
+      position: absolute;
+      bottom: 3px;
+      right: 0;
+      background: url("https://vingroup.net/assets/images/quote-2.png") 0 0/100%
+        no-repeat;
+    }
+  }
+
+  .textDetail {
+    margin-top: 30px;
+    color: $secondary-color;
+  }
+
+  .lpeceo {
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  .ceoPosition {
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 10px;
+    color: $primary-color;
+  }
+
+  .carouselCeo {
+    display: flex !important;
+    margin-top: 20px;
+    margin-bottom: 40px;
+
+    position: relative;
+  }
+
+  .customSlider {
+    position: relative;
+  }
+
+  .descCeo {
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .vision-page {
+    .carouselCeo {
+      display: inline-block !important;
+      img {
+        margin-top: 40px;
+        width: 100%;
+      }
+    }
+    .heading {
+      font-size: 30px;
+    }
+    .quotes {
+      width: 100% !important;
+      font-size: 18px;
+    }
+
+    .textDetail {
+      font-size: 14px;
+    }
+    .subTitle {
+      margin-top: 10px;
+      font-size: 16px;
+    }
+    .descCeo {
+      font-size: 14px;
+    }
+  }
+}
+
+.textTitle {
+  color: $primary-color;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.vision-title {
+  font-size: 27px;
+  border-bottom: 2px solid #333;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  text-transform: unset;
+  font-weight: bold;
+  text-transform: uppercase;
+
+  &-color {
+    color: $color-text;
+  }
+}
+
+@media screen and(max-width:992px) {
+  .vision-title {
+    font-size: 22px;
+  }
+}
+
+.wrapper-bird-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .bird-img {
+    width: auto;
+    height: 350px;
+  }
+}

@@ -1,0 +1,40 @@
+.bg-testimonior {
+  position: relative;
+  background-attachment: fixed;
+  width: 100%;
+  padding: 50px 0;
+
+  p {
+    color: #fff;
+  }
+}
+.opacity-bg {
+  background: #000;
+  opacity: 0.6;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.wrapper-container {
+  color: #fff;
+  text-align: center !important;
+  width: 100%;
+}
+
+.wrapper-carousel {
+  margin-top: 50px;
+}
+
+.slide-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ava-item {
+  width: 70px !important;
+  height: 70px !important;
+  border-radius: 50%;
+}

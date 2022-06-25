@@ -1,0 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap");
+
+.wrapper-ittc {
+  background: linear-gradient(180deg, #000, #151f37, #88c6da);
+  &.small {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .wrapper-ittc.small {
+    display: block;
+  }
+}

@@ -1,0 +1,93 @@
+.loginContainer {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+
+  flex-direction: column;
+  background-color: #f0f2f5;
+}
+
+.formContainer {
+  background-color: #fff;
+  padding: 10px 24px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.forgetPassword {
+  margin-top: 30px !important;
+}
+
+.createButton {
+  width: 80%;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  padding: 8px 16px;
+  font-size: 18px;
+  color: #fff;
+  background-color: #16a085;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+}
+
+.createButton:hover {
+  background-color: #3ec5aa;
+  color: #fff;
+}
+
+.loginBtn {
+  margin-top: 10px !important;
+  margin-bottom: 10px !important;
+  background-color: #375bc3 !important;
+  color: #fff !important;
+  text-transform: capitalize !important;
+  &:hover {
+    background-color: #6499e7 !important;
+  }
+}
+
+.form-login {
+  width: 400px;
+}
+
+@media screen and (max-width: 992px) {
+  .form-login {
+    width: 100% !important;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .loginContainer {
+    background-color: #fff;
+    justify-content: flex-start;
+    height: unset !important;
+    min-height: unset !important;
+  }
+  .formContainer {
+    box-shadow: unset;
+    border-radius: unset;
+    padding: 10px;
+    width: 100% !important;
+
+    form {
+      width: 100% !important;
+    }
+  }
+}

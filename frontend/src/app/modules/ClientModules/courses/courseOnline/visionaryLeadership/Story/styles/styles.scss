@@ -1,0 +1,104 @@
+@import "assets/styles/common.scss";
+.story {
+  p {
+    font-size: $fs-3;
+  }
+  .content01 {
+    .video {
+      width: 100%;
+      padding: 10px;
+      min-height: 315px;
+    }
+    position: relative;
+    margin-bottom: 30px;
+    div:first-child {
+      position: absolute;
+      right: 0%;
+      top: 50%;
+      transform: translate(0%, -50%);
+    }
+
+    div:nth-child(2) {
+      text-align: center;
+      img {
+        display: inline-flex;
+      }
+    }
+  }
+  .content02 {
+    div:first-child {
+      display: flex;
+      justify-content: center;
+      align-items: left;
+      flex-direction: column;
+    }
+    div:nth-child(2) {
+      text-align: center;
+      img {
+        display: inline-flex;
+      }
+    }
+  }
+}
+.img-border {
+  width: 100%;
+  height: 500px;
+}
+
+.img-video {
+  height: 400px;
+  position: relative;
+  z-index: 2;
+  box-shadow: #cbbd9a -15px 15px;
+}
+
+.wrapper-video {
+  position: relative;
+}
+
+.button-play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: $c-black-0;
+  z-index: 3;
+  padding: 10px 13px;
+  background-color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s;
+
+  &:hover {
+    box-shadow: #fff 0px 7px 29px 0px;
+  }
+}
+
+.bg-image {
+  background-image: url("https://lpe.vn/img/lpe/chuong-trinh-huan-luyen/online/visionary-leadership/bg-story.png");
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.color-text {
+  color: #7b6a3d;
+}
+
+@media screen and (max-width: 768px) {
+  .story {
+    .content01 {
+      position: relative;
+      div:first-child {
+        position: relative;
+        transform: unset;
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  .box-color {
+    left: 22%;
+  }
+}

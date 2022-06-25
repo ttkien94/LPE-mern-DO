@@ -1,0 +1,92 @@
+$color-icon: #0270ad;
+$item-bg: #e9e9e9;
+$bg-btn: #6bc63e;
+
+.service-item {
+  border: 1px solid #ddd;
+  padding: 35px 10px;
+  transition: all 0.4s ease-out 0s;
+  z-index: 1;
+  background: $item-bg;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  text-align: center;
+
+  .cat-icon {
+    font-size: 40px;
+    color: $color-icon;
+  }
+
+  .service-item-caption {
+    h2 {
+      color: $color-icon;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 27px;
+      margin-bottom: 20px;
+      height: 70px;
+      text-transform: capitalize;
+    }
+
+    p {
+      -webkit-transition: all 0.2s ease-out 0s;
+      -moz-transition: all 0.2s ease-out 0s;
+      -ms-transition: all 0.2s ease-out 0s;
+      -o-transition: all 0.2s ease-out 0s;
+      transition: all 0.2s ease-out 0s;
+      font-size: 16px;
+      margin-bottom: 20px;
+      color: $color-icon;
+    }
+
+    a {
+      color: $color-icon;
+      font-size: 18px;
+      transition: all 0.3s;
+      display: inline-block;
+      position: relative;
+
+      background: $bg-btn;
+      color: #fff;
+      padding: 5px 20px;
+      border-radius: 5px;
+
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
+}
+
+.service-item {
+  &:hover {
+    border: 1px solid transparent;
+    box-shadow: 0 15px 25px rgba(168, 96, 0, 0.1);
+
+    cursor: pointer;
+
+    a {
+      color: #fff;
+
+      &::after {
+        background-color: $color-icon;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .cat-icon {
+    font-size: 30px !important;
+  }
+  .service-item-caption {
+    h2 {
+      font-size: 24px !important;
+      margin-bottom: 15px !important;
+    }
+    p {
+      font-size: 14px !important;
+      margin-bottom: 15px !important;
+    }
+  }
+}

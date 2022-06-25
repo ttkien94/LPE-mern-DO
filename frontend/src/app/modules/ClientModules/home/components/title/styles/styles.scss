@@ -1,0 +1,20 @@
+.title {
+  font-size: 40px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.description {
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .title {
+    font-size: 30px;
+  }
+
+  .description {
+    font-size: 14px !important;
+  }
+}

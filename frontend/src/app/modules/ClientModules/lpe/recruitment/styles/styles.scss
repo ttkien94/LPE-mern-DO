@@ -1,0 +1,172 @@
+// Constant
+$primary-color: #ee4d2d;
+
+$breakpoints: (
+  "extra-large": 1280px,
+  "medium-large": 1024px,
+  "large": 992px,
+  "medium": 768px,
+  "small": 640px,
+  "extra-small": 480px,
+);
+
+@mixin centerXYPosition {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin responsiveScreen($screen) {
+  //Kiểm tra screen có tồn tại trong breakpoint hay không
+  @if (map-has-key($map: $breakpoints, $key: $screen)) {
+    //Nếu tìm thấy thì lấy giá trị của $screent gán cho $value
+    $value: map-get(
+      $map: $breakpoints,
+      $key: $screen,
+    );
+
+    @media screen and (max-width: $value) {
+      @content;
+    }
+  } @else {
+    @warn 'Screen không tồn tại';
+  }
+}
+
+.recruitment-page {
+  .spotLightMainTitle {
+    text-align: center;
+    font-size: 32px;
+    line-height: 48px;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+
+  .spotLightItem {
+    text-align: center;
+
+    i {
+      font-size: 60px;
+      margin-bottom: 20px;
+      color: $primary-color;
+    }
+
+    h4 {
+      font-size: 23px;
+      font-weight: 700;
+      color: $primary-color;
+      margin-bottom: 20px;
+    }
+
+    p {
+      margin-top: 16px;
+      color: #202325;
+      font-size: 16px;
+      font-weight: 400;
+    }
+  }
+
+  .jobItem {
+    width: 250px;
+    padding: 10px 50px;
+    cursor: pointer;
+
+    h4 {
+      border-top: 5px solid transparent;
+      padding-top: 20px;
+      margin-bottom: 20px;
+      font-weight: 700;
+    }
+
+    p {
+      color: #797b7c;
+    }
+
+    &:hover {
+      h4 {
+        color: $primary-color;
+        border-top: 5px solid $primary-color;
+      }
+
+      p {
+        color: $primary-color;
+      }
+    }
+  }
+
+  .lovedTitle {
+    font-size: 32px;
+    line-height: 48px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: $primary-color;
+  }
+
+  .lovedList {
+    p {
+      margin: 15px 0;
+    }
+  }
+
+  .titleCompany {
+    font-size: 32px;
+    line-height: 48px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: $primary-color;
+    text-align: center;
+  }
+
+  .swiper-wrapper {
+    position: relative;
+
+    .companyImg {
+      width: 850px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
+
+@include responsiveScreen("large") {
+  .bgHeading {
+    .introText {
+      padding: 0 20px;
+      h4 {
+        font-size: 40px;
+        line-height: 3rem;
+      }
+
+      p {
+        font-size: 20px;
+      }
+    }
+  }
+
+  .iFrameVideo {
+    height: 400px;
+  }
+
+  .jobItem {
+    padding: 10px 0 !important;
+  }
+
+  .companyImg {
+    width: 90%;
+  }
+}
+
+@include responsiveScreen("small") {
+  .bgHeading {
+    .introText {
+      padding: 0 10px;
+    }
+  }
+
+  .iFrameVideo {
+    height: 300px;
+  }
+}

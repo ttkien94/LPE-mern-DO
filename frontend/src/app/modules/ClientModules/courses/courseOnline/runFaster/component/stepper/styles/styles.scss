@@ -1,0 +1,96 @@
+.stepper-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  padding: 0 10px;
+  margin-top: 30px;
+
+  .stepper-number {
+    font-size: 18px;
+    font-weight: 400;
+    height: 60px;
+    width: 60px;
+    color: #fff;
+    background-color: #f39c12;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin: 10px 0;
+  }
+
+  .stepper-card {
+    padding: 20px 20px;   
+    border-radius: 16px;
+    background-color: #fff;
+    margin-left: 20px;
+    width: 432px;
+    position: relative;
+    transition: all 0.3s;
+
+    &:hover {
+      background-color: #f39c12;
+      box-shadow: 0px 0px 24px 0px #f39c12;
+      color: #fff;
+      
+      .stepper-card_description {
+        color: #fff;
+      }
+
+      .stepper-card_arrow {
+        background-color: #f39c12 !important;
+      }
+    }
+
+    &_title {
+      font-size: 18px;
+    }
+
+    &_description {
+      color: rgba(0, 0, 0, 0.67);
+      font-size: 15px;
+      line-height: 1.5rem;
+      margin: 0;
+    }
+
+    &_arrow {
+      position: absolute;
+      background-color: #fff;
+      width: 12px;
+      height: 12px;
+      top: 50%;
+      left: -1%;
+      transform: translateY(-50%) rotate(45deg);
+    transition: all 0.3s;
+
+    }
+  }
+}
+@media screen and (max-width: 1200px) {
+  .stepper-number {
+    height:60px !important;
+    width:60px !important;
+  }
+  .stepper-card {
+    width: 360px!important;
+  }
+}
+
+
+@media screen and (max-width: 520px) {
+  .stepper-card {
+    width: 350px!important;
+  }
+}
+
+
+@media screen and (max-width: 450px) {
+  .stepper-number {
+    height: 40px !important;
+    width: 40px !important;
+  }
+  .stepper-card {
+    width: 300px!important;
+  }
+}

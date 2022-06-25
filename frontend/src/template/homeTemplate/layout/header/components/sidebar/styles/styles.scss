@@ -1,0 +1,86 @@
+@import "assets/styles/common.scss";
+
+.sideMenu {
+  padding: 10px 0px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &-info {
+    justify-content: unset !important;
+  }
+}
+
+.menuLogin {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 15px 10px;
+}
+
+.imgNext {
+  min-height: 60% !important;
+  cursor: pointer;
+  transition: all 0.5s;
+
+  &:hover {
+    opacity: 0.5;
+  }
+}
+
+.menuSide {
+  list-style: none;
+  margin-bottom: 0;
+}
+
+.menuSideItem {
+  padding: 20px 0;
+  a {
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+  }
+}
+
+.imgItem {
+  transform: rotate(90deg);
+}
+.titleUrl {
+  color: $black-0;
+
+  &:hover {
+    color: $blue-1;
+
+    text-decoration: none;
+  }
+}
+.titleUrl2 {
+  color: $black-0;
+
+  &:hover {
+    transition: all 0.3s;
+  }
+}
+
+.logOut {
+  display: flex;
+  align-items: center;
+  padding: 0px 16px;
+  min-height: 56px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.sidebar_link {
+  color: #333;
+}
+
+.summary-acordion {
+  background-color: #dfe8f6 !important;
+
+  &:hover {
+    background-color: #c9ddfc !important;
+  }
+}

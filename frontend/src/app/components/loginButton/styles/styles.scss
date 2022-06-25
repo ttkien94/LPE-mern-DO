@@ -1,0 +1,23 @@
+@import "/src/assets/styles/common.scss";
+.imgBorder {
+  border-radius: 50% !important;
+  width: 30px;
+  height: 30px;
+}
+
+.loginText {
+  transition: all 0.3s;
+}
+
+.imgLink {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.imgLinkSide {
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+}

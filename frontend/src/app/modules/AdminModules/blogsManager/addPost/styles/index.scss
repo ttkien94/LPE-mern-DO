@@ -1,0 +1,191 @@
+$primary-color: #31be7d;
+
+.addblog-screen {
+  position: relative;
+  height: 100%;
+
+  .fixed-layout {
+    position: absolute;
+    bottom: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    .btn-addblog {
+      padding: 10px 20px;
+      border-radius: 8px;
+
+      &-preview {
+        background: none;
+        margin-right: 20px;
+        border: 1px solid #79828a;
+        color: #79828a;
+      }
+
+      &-post {
+        background: $primary-color;
+        margin-right: 20px;
+        border: 1px solid $primary-color;
+        color: #fff;
+      }
+    }
+  }
+}
+
+.blog-outside {
+  width: 650px;
+  margin: 0 auto;
+
+  label {
+    color: $primary-color;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 0;
+  }
+
+  .wrapperUpload-cover {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+
+    position: relative;
+
+    &:hover {
+      .buttonDeleteImage {
+        display: flex;
+        opacity: 1;
+      }
+    }
+  }
+
+  .labelCover {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    background-color: white;
+    border: 2px dashed #495057;
+    border-radius: 8px;
+    img {
+      max-width: 55%;
+    }
+    input {
+      display: none;
+    }
+  }
+
+  .topic-blog {
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    select {
+      padding: 12px 15px;
+      width: 300px;
+      border-radius: 8px;
+      border: 2px solid $primary-color;
+    }
+  }
+
+  .title-blog {
+    textarea {
+      min-width: 650px !important;
+      margin-top: 20px;
+      font-size: 22px;
+      padding: 8px 12px;
+      border-radius: 8px;
+      border: 2px solid $primary-color;
+
+      &::placeholder {
+        color: #adb5bd;
+        font-size: 22px;
+      }
+    }
+  }
+
+  .button-animation {
+    display: inline-block;
+    position: relative;
+    white-space: nowrap;
+    .ios-toggle {
+      // position: relative;
+      display: inline-block;
+      // width: 2.975em;
+      // height: 1.75em;
+      // border-radius: 1.75em;
+      // background: #b7bbc8;
+      // vertical-align: middle;
+      // margin: 0 0.5rem;
+      input {
+        max-height: 0;
+        max-width: 0;
+        opacity: 0;
+        & + label {
+          display: block;
+          position: relative;
+          box-shadow: inset 0 0 0px 1px rgba(0, 0, 0, 0.1);
+          text-indent: -5000px;
+          height: 30px;
+          width: 50px;
+          border-radius: 15px;
+        }
+
+        & + label:before {
+          content: "";
+          position: absolute;
+          display: block;
+          height: 30px;
+          width: 30px;
+          top: 0;
+          left: 0;
+          border-radius: 15px;
+          background: transparent;
+          -moz-transition: 0.2s ease-in-out;
+          -webkit-transition: 0.2s ease-in-out;
+          transition: 0.2s ease-in-out;
+        }
+
+        & + label:after {
+          content: "";
+          position: absolute;
+          display: block;
+          height: 30px;
+          width: 30px;
+          top: 0;
+          left: 0px;
+          border-radius: 15px;
+          background: white;
+          box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.2),
+            0 2px 4px rgba(0, 0, 0, 0.2);
+          -moz-transition: 0.2s ease-in-out;
+          -webkit-transition: 0.2s ease-in-out;
+          transition: 0.2s ease-in-out;
+        }
+
+        &:checked + label:before {
+          width: 50px;
+          background: #0089d7;
+        }
+
+        &:checked + label:after {
+          left: 20px;
+          box-shadow: inset 0 0 0 1px #0089d7, 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,242 @@
+$color-primary: #9cdaf7;
+
+@mixin hoverStyle() {
+  .overlay {
+    background: $color-primary !important;
+  }
+
+  .shortInfo {
+    bottom: 50px;
+    left: 50px;
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.bannerVas {
+  height: 100vh;
+  background-position: top;
+  background-attachment: fixed;
+  background-size: cover;
+  width: 100vw !important;
+  margin-bottom: 50px;
+
+  position: relative;
+
+  .overlay {
+    top: 0;
+    z-index: 1;
+  }
+}
+@media screen and (max-width: 500px) {
+  .bannerVas {
+    background-position: top left;
+  }
+}
+
+.bannerText {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-shadow: 3px 4px 7px rgba(81, 67, 21, 0.8);
+
+  height: 100%;
+  color: #fff;
+  text-align: center;
+  z-index: 2;
+
+  i {
+    color: #333 !important;
+  }
+
+  h1 {
+    font-family: "tungsten";
+    font-size: 80px !important;
+    letter-spacing: 0.6rem;
+    font-weight: 500;
+  }
+
+  p {
+    font-size: 20px;
+  }
+
+  .buttonPlay {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-color: #fff;
+    font-size: 26px;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .bannerText {
+    h1 {
+      font-size: 30px;
+    }
+    p {
+      font-size: 18px;
+    }
+  }
+}
+
+.bannerBottomVas {
+  height: 500px;
+  background-position: center top;
+  background-size: cover;
+  width: 100vw !important;
+  margin-top: 50px;
+  text-align: center;
+  color: #fff;
+  position: relative;
+  background-attachment: fixed;
+
+  .bannerBottomText {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    height: 100%;
+    width: 100%;
+    padding: 0 10px;
+
+    p {
+      padding-left: 20px;
+      padding-right: 20px;
+      margin-bottom: 10px;
+      font-size: 20px;
+      text-shadow: 3px 4px 7px rgba(0, 0, 0, 0.8);
+    }
+
+    h3 {
+      text-shadow: 3px 4px 7px rgba(0, 0, 0, 0.8);
+    }
+  }
+}
+
+.wrapperImg {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: 30px;
+  grid-gap: 20px;
+
+  img {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+  }
+
+  .gridItem1 {
+    grid-column: 1;
+    grid-row: 1;
+    cursor: pointer;
+    position: relative;
+
+    // &:hover {
+    //   @include hoverStyle;
+    // }
+  }
+
+  .gridItem2 {
+    grid-column: 2;
+    grid-row: 1;
+    cursor: pointer;
+    position: relative;
+
+    // &:hover {
+    //   @include hoverStyle;
+    // }
+  }
+
+  .gridItem3 {
+    grid-column: 3;
+    grid-row: 1;
+    cursor: pointer;
+    position: relative;
+
+    // &:hover {
+    //   @include hoverStyle;
+    // }
+  }
+
+  .gridItem4 {
+    grid-column: 4;
+    grid-row: 1 / span 2;
+    cursor: pointer;
+    position: relative;
+
+    // &:hover {
+    //   @include hoverStyle;
+    // }
+  }
+
+  .gridItem5 {
+    grid-column: 1 / span 2;
+    cursor: pointer;
+    position: relative;
+
+    // &:hover {
+    //   @include hoverStyle;
+    // }
+  }
+
+  .gridItem6 {
+    grid-column: 3;
+    grid-row: 2;
+    cursor: pointer;
+    position: relative;
+
+    // &:hover {
+    //   @include hoverStyle;
+    // }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .wrapperImg {
+    grid-template-columns: repeat(1, 1fr) !important;
+
+    .gridItem1 {
+      // position: unset !important;
+      grid-column: 1;
+      grid-row: 1;
+    }
+    .gridItem2 {
+      grid-column: 1;
+      grid-row: 2;
+    }
+    .gridItem3 {
+      grid-column: 1;
+      grid-row: 3;
+    }
+    .gridItem4 {
+      grid-column: 1;
+      grid-row: 4;
+    }
+    .gridItem5 {
+      grid-column: 1;
+      grid-row: 5;
+    }
+    .gridItem6 {
+      grid-column: 1;
+      grid-row: 6;
+    }
+  }
+}

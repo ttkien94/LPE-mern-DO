@@ -1,0 +1,22 @@
+.ittc-video {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .video-bg {
+    position: relative;
+  }
+
+  .video-btn-play {
+    position: absolute;
+    background-color: #fff;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 100%;
+    border: none;
+    width: 80px;
+    height: 80px;
+    font-size: 20px;
+  }
+}

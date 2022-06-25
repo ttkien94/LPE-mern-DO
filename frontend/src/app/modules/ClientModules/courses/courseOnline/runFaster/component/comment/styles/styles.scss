@@ -1,0 +1,29 @@
+.comment-container {
+    text-align: center;
+    background: #fff;
+    .comment-container_ava {
+        p {
+            margin : 0;
+        }
+        img {
+            width: 70px;
+            height: 70px;
+
+            border-radius: 50%;
+        }
+
+        .comment-name {
+            font-size: 22px;
+            font-weight: bold;
+            font-family: 'Lato', sans-serif;
+        }
+        .comment-desc {
+            text-transform: uppercase;
+        }
+      
+    }
+    .comment-content {
+        text-align: justify;
+        padding: 0 20px;
+    }
+}

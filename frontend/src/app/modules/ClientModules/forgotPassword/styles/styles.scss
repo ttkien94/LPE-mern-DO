@@ -1,0 +1,20 @@
+.forgot__btn--save {
+  margin: 10px 0;
+  background: #3777bc !important;
+  text-transform: capitalize;
+
+  &:hover {
+    background: #6499e7 !important;
+  }
+}
+
+.forgot__btn--cancel {
+  margin: 10px 0;
+  background: #adb5bd !important;
+  color: #fff;
+  text-transform: capitalize;
+
+  &:hover {
+    background: #adb5bd !important;
+  }
+}

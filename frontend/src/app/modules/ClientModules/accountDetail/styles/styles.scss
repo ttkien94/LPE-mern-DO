@@ -1,0 +1,116 @@
+.menuBox {
+  background: #fff;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  border-radius: 15px;
+}
+
+.infoUser {
+  padding: 20px;
+  border-bottom: 1px solid #dbeaf5;
+
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.avatar {
+  margin-right: 16px !important;
+}
+
+.menuList {
+  list-style: none;
+
+  .menuItem {
+    cursor: pointer;
+
+    &:hover {
+      background: unset !important;
+      a {
+        color: unset !important;
+
+        i {
+          color: default !important;
+        }
+      }
+    }
+
+    a {
+      padding: 15px 20px;
+      display: block;
+      width: 100%;
+      font-size: 20px;
+      color: #273167;
+      i {
+        color: #3777bc;
+      }
+    }
+
+    &Active {
+      background: #eff3ff;
+
+      &:hover {
+        background: #eff3ff !important;
+        a {
+          color: unset !important;
+
+          i {
+            color: default !important;
+          }
+        }
+      }
+
+      a {
+        padding: 15px 20px;
+        display: block;
+        width: 100%;
+        font-size: 20px;
+        color: #273167;
+        i {
+          color: #3777bc;
+        }
+      }
+    }
+  }
+}
+
+.wrapperName {
+  p:first-child {
+    font-size: 20px;
+    color: #3777bc;
+  }
+
+  p:last-child {
+    font-size: 16px;
+    color: #666666;
+  }
+}
+
+// CSS for log out
+.logout {
+  cursor: pointer;
+  color: rgb(165, 165, 165) !important;
+  padding: 15px 20px;
+  display: block;
+  width: 100%;
+  font-size: 20px;
+
+  &:hover {
+    background: unset !important;
+  }
+}
+
+.heading {
+  h3 {
+    font-weight: 600;
+    color: #273167;
+    font-size: 28px;
+    margin: 0;
+  }
+  p {
+    font-size: 18px;
+    color: rgb(71, 71, 71);
+    padding: 15px 0;
+    margin: 0;
+  }
+}

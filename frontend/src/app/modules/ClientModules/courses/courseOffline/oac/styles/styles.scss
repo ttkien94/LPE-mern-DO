@@ -1,0 +1,30 @@
+@import "/src/assets/styles/common.scss";
+.oac {
+  background-color: #ddf86d;
+
+  .courseTitle {
+    text-shadow: 0 0 20px #ddf86d;
+  }
+  iframe {
+    width: 100%;
+  }
+  img {
+    margin: auto;
+  }
+  .img-500 {
+    max-height: 500px;
+  }
+  .camp {
+    background: url("https://lpe.vn/img/lpe/chuong-trinh-huan-luyen/offline/oac/oac-bg-012.png")
+      100% 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    height: 300px;
+    max-width: 600px;
+    padding: 0 60px;
+    margin: auto;
+  }
+  @media (max-width: 768px) {
+  }
+}

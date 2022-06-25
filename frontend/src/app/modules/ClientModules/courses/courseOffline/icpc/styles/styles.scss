@@ -1,0 +1,472 @@
+.ICPC {
+  // default css
+  background-color: #0f253a;
+  color: white;
+  font-size: 15px;
+  text-align: center;
+  img {
+    width: 100%;
+  }
+  @mixin triangle(
+    $border-top,
+    $border-bot,
+    $size1,
+    $border-colortop,
+    $border-colorbot,
+    $p-bottom
+  ) {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: $border-top $size1 $border-bot $size1;
+    border-color: $border-colortop transparent $border-colorbot transparent;
+    transition: border-width 0.5s;
+    p {
+      position: absolute;
+      bottom: $p-bottom;
+      transform: translate(-50%, -50%);
+      color: black;
+      width: $border-bot;
+    }
+  }
+  .quote {
+    margin: 40px auto;
+    display: block;
+    width: 100%;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    color: #cfc547;
+    text-align: center;
+    letter-spacing: 1px;
+    text-shadow: 10px 10px 25px rgb(81, 67, 21), -10px 10px 25px rgb(81, 67, 21),
+      -10px -10px 25px rgb(81, 67, 21), 10px -10px 25px rgb(81, 67, 21);
+    font-size: 30px;
+  }
+  .tab-menu {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: center;
+    button {
+      background-color: transparent;
+      position: relative;
+      display: inline-block;
+      padding: 30px 61px;
+      border-radius: 4px;
+      color: #03e9f4;
+      text-decoration: none;
+      text-transform: uppercase;
+      overflow: hidden;
+      margin: 25px;
+      font-family: "Roboto", sans-serif;
+      filter: hue-rotate(0deg);
+      border: 2px solid #d2bdff;
+      transition: all 0.1s linear;
+
+      &:hover {
+        border: 1px solid transparent;
+        span {
+          position: absolute;
+          display: block;
+
+          &:nth-child(1) {
+            filter: hue-rotate(0deg);
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, #3a86ff);
+            animation: animate1 1s linear infinite;
+          }
+          @keyframes animate1 {
+            0% {
+              left: -100%;
+            }
+            50%,
+            100% {
+              left: 100%;
+            }
+          }
+
+          &:nth-child(2) {
+            filter: hue-rotate(60deg);
+            top: -100%;
+            right: 0;
+            width: 3px;
+            height: 100%;
+            background: linear-gradient(180deg, transparent, #3a86ff);
+            animation: animate2 1s linear infinite;
+            animation-delay: 0.25s;
+          }
+
+          @keyframes animate2 {
+            0% {
+              top: -100%;
+            }
+            50%,
+            100% {
+              top: 100%;
+            }
+          }
+          &:nth-child(3) {
+            filter: hue-rotate(120deg);
+            bottom: 0;
+            right: 0;
+            width: 100%;
+
+            background: linear-gradient(270deg, transparent, #3a86ff);
+            animation: animate3 1s linear infinite;
+            animation-delay: 0.5s;
+          }
+          @keyframes animate3 {
+            0% {
+              right: -100%;
+              height: 3px;
+            }
+            50%,
+            100% {
+              height: 2px;
+              right: 100%;
+            }
+          }
+
+          &:nth-child(4) {
+            filter: hue-rotate(300deg);
+            bottom: -100%;
+            left: 0;
+            width: 3px;
+            height: 100%;
+            background: linear-gradient(360deg, transparent, #3a86ff);
+            animation: animate4 1s linear infinite;
+            animation-delay: 0.75s;
+          }
+          @keyframes animate4 {
+            0% {
+              bottom: -100%;
+            }
+            50%,
+            100% {
+              bottom: 100%;
+            }
+          }
+        }
+      }
+      h2 {
+        margin-bottom: 0;
+      }
+    }
+  }
+  .clearfix {
+    &:after {
+      display: block;
+      content: "";
+      clear: both;
+    }
+  }
+  .triangle-level {
+    height: 100%;
+    position: relative;
+    text-align: center;
+    width: 600px;
+    height: 600px;
+    margin: auto;
+    a {
+      color: white;
+    }
+    .fa-info-circle {
+      vertical-align: 3px;
+      cursor: pointer;
+    }
+    button {
+      font-size: 100%;
+      border: 0;
+      padding: 0;
+      background-color: transparent;
+    }
+
+    @keyframes changeOpacity {
+      0% {
+        transform: translateX(0);
+      }
+      45% {
+        transform: translateX(-50%);
+      }
+      55% {
+        transform: translateX(-50%);
+      }
+      100% {
+        transform: translateX(0);
+      }
+    }
+    .changeOpacity {
+      animation-name: changeOpacity;
+      animation-duration: 1.5s;
+    }
+    .triangle1 {
+      position: absolute;
+      transition: opacity 1.5s ease-in;
+
+      .triangle-background-1 {
+        @include triangle(0, 600px, 300px, transparent, #4db6ac, 15px);
+        text-align: center;
+      }
+      .triangle-background-2 {
+        position: absolute;
+        top: 0;
+        left: 45px;
+        @include triangle(0, 510px, 255px, transparent, #66bb6a, -495px);
+      }
+      .triangle-background-3 {
+        position: absolute;
+
+        top: 0;
+        left: 90px;
+        @include triangle(0, 420px, 210px, transparent, #d4e157, -410px);
+      }
+      .triangle-background-4 {
+        position: absolute;
+        top: 0;
+        left: 135px;
+        @include triangle(0, 330px, 165px, transparent, #fdd835, -325px);
+        p {
+          color: black;
+        }
+      }
+      .triangle-background-5 {
+        position: absolute;
+        top: 0;
+        left: 175px;
+        @include triangle(0, 250px, 125px, transparent, #ffb300, -235px);
+      }
+      .triangle-background-6 {
+        position: absolute;
+        top: 0;
+        left: 225px;
+        @include triangle(0, 150px, 75px, transparent, #ff8a65, -135px);
+      }
+    }
+    .triangle2 {
+      transition: opacity 500ms ease-in;
+      .triangle-background-1 {
+        position: absolute;
+        @include triangle(600px, 0px, 300px, #4db6ac, transparent, 515px);
+        p {
+          width: 300px;
+        }
+      }
+      .triangle-background-2 {
+        position: absolute;
+        top: 90px;
+        left: 45px;
+        @include triangle(510px, 0, 255px, #66bb6a, transparent, 430px);
+        p {
+          width: 300px;
+        }
+      }
+      .triangle-background-3 {
+        position: absolute;
+
+        top: 0180px;
+        left: 90px;
+        @include triangle(420px, 0, 210px, #d4e157, transparent, 335px);
+        p {
+          width: 300px;
+        }
+      }
+      .triangle-background-4 {
+        position: absolute;
+        top: 270px;
+        left: 135px;
+        @include triangle(330px, 0, 165px, #fdd835, transparent, 255px);
+        p {
+          width: 300px;
+          color: black;
+        }
+      }
+      .triangle-background-5 {
+        position: absolute;
+        top: 350px;
+        left: 175px;
+        @include triangle(250px, 0, 125px, #ffb300, transparent, 165px);
+        p {
+          width: 300px;
+        }
+      }
+      .triangle-background-6 {
+        position: absolute;
+        top: 450px;
+        left: 225px;
+        @include triangle(150px, 0, 75px, #ff8a65, transparent, 75px);
+        p {
+          width: 300px;
+        }
+      }
+    }
+  }
+
+  .apply {
+    p {
+      padding: 0 10px;
+      font-size: 16px;
+      text-align: left;
+      min-height: 100px;
+      color: black;
+    }
+    .apply-card {
+      padding: 45px 0px 0px 50px;
+      background: #ebf5ff;
+      transition: all 0.4s ease-in-out;
+      &:hover {
+        background: #ffcd28;
+        .number-icon-area {
+          h1 {
+            opacity: 1;
+          }
+        }
+      }
+      .apply-content {
+        padding-right: 30px;
+      }
+      .number-icon-area {
+        h1 {
+          font-weight: 600;
+          font-size: 96px;
+          line-height: 65px;
+          letter-spacing: -1px;
+          color: #000;
+          opacity: 0.05;
+          margin-bottom: 10px;
+          margin-right: -4px;
+          transition: all 0.4s ease-in-out;
+        }
+      }
+    }
+  }
+
+  .privilege {
+    text-align: center;
+    padding-bottom: 50px;
+    img {
+      width: 50%;
+      display: block;
+      margin: auto;
+    }
+    p {
+      padding: 0 20px;
+      font-size: 20px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .tab-menu {
+      button {
+        margin: 10px;
+        padding: 15px 30px;
+      }
+    }
+    .quote {
+      font-size: 25px;
+      letter-spacing: 2px;
+    }
+    .triangle-level {
+      width: 300px;
+      height: 300px;
+      .triangle1 {
+        position: absolute;
+        transition: opacity 1.5s ease-in;
+
+        .triangle-background-1 {
+          @include triangle(0, 300px, 150px, transparent, #4db6ac, -25px);
+          text-align: center;
+        }
+        .triangle-background-2 {
+          position: absolute;
+          top: 0;
+          left: 15px;
+          @include triangle(0, 270px, 135px, transparent, #66bb6a, -295px);
+        }
+        .triangle-background-3 {
+          position: absolute;
+          top: 0;
+          left: 30px;
+          @include triangle(0, 240px, 120px, transparent, #d4e157, -265px);
+        }
+        .triangle-background-4 {
+          position: absolute;
+          top: 0;
+          left: 45px;
+          @include triangle(0, 210px, 105px, transparent, #fdd835, -235px);
+          p {
+            color: black;
+          }
+        }
+        .triangle-background-5 {
+          position: absolute;
+          top: 0;
+          left: 60px;
+          @include triangle(0, 180px, 90px, transparent, #ffb300, -205px);
+        }
+        .triangle-background-6 {
+          position: absolute;
+          top: 0;
+          left: 75px;
+          @include triangle(0, 150px, 75px, transparent, #ff8a65, -175px);
+        }
+      }
+      .triangle2 {
+        .triangle-background-1 {
+          @include triangle(300px, 0px, 150px, #4db6ac, transparent, 245px);
+          p {
+            width: 300px;
+          }
+        }
+        .triangle-background-2 {
+          position: absolute;
+          top: 30px;
+          left: 15px;
+          @include triangle(270px, 0, 135px, #66bb6a, transparent, 215px);
+          p {
+            width: 300px;
+          }
+        }
+        .triangle-background-3 {
+          position: absolute;
+
+          top: 60px;
+          left: 30px;
+          @include triangle(240px, 0, 120px, #d4e157, transparent, 185px);
+          p {
+            width: 300px;
+          }
+        }
+        .triangle-background-4 {
+          position: absolute;
+          top: 90px;
+          left: 45px;
+          @include triangle(210px, 0, 105px, #fdd835, transparent, 155px);
+          p {
+            width: 300px;
+            color: black;
+          }
+        }
+        .triangle-background-5 {
+          position: absolute;
+          top: 120px;
+          left: 60px;
+          @include triangle(180px, 0, 90px, #ffb300, transparent, 125px);
+          p {
+            width: 300px;
+          }
+        }
+        .triangle-background-6 {
+          position: absolute;
+          top: 150px;
+          left: 75px;
+          @include triangle(150px, 0, 75px, #ff8a65, transparent, 90px);
+          p {
+            width: 300px;
+          }
+        }
+      }
+    }
+  }
+}

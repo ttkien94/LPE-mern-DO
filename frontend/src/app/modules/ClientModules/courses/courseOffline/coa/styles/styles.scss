@@ -1,0 +1,33 @@
+@import "/src/assets/styles/common.scss";
+.coa {
+  background-color: #008090;
+  color: white;
+  .courseTitle {
+    text-shadow: 0 0 20px #008090;
+  }
+  iframe {
+    width: 100%;
+  }
+  .borderTop {
+    height: 34px;
+    border-bottom: 1px solid;
+  }
+  .borderBottom {
+    border-bottom: 1px solid;
+    margin-top: 15px;
+  }
+  img {
+    margin: auto;
+  }
+  ul {
+    margin-left: 15px;
+  }
+  a {
+    color: black;
+    text-decoration: underline !important;
+    display: block;
+    &:hover {
+      color: #a3e8f1;
+    }
+  }
+}

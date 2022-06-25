@@ -1,0 +1,17 @@
+.wrapper-ittc_item {
+  color: #fff;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  .ittc-icon {
+    width: 50%;
+  }
+
+  .ittc-text {
+    margin-top: 30px;
+    font-size: 20px;
+  }
+}

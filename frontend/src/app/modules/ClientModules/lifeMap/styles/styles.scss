@@ -1,0 +1,327 @@
+@keyframes movingSign {
+  0% {
+    top: 60%;
+  }
+  50% {
+    top: calc(60% + 10px);
+  }
+  100% {
+    top: 60%;
+  }
+}
+
+@keyframes movingDolphin {
+  0% {
+    right: 20%;
+  }
+
+  50% {
+    right: 30%;
+  }
+
+  100% {
+    right: 20%;
+  }
+}
+
+@keyframes movingWhale {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(30deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .lpe-lifemap {
+    background: linear-gradient(
+      180deg,
+      rgba(69, 165, 190, 1) 0%,
+      rgba(77, 210, 255, 1) 100%
+    );
+  }
+
+  .lpe-lifemap_wrapper {
+    width: 80%;
+  }
+
+  .lpe-lifemap_big-island {
+    width: 30%;
+  }
+}
+
+@media screen and (max-width: 1399px) {
+  .lpe-lifemap_big-island {
+    width: 32%;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .lpe-lifemap_big-island {
+    width: 30%;
+
+    .startIsland {
+      width: 100%;
+    }
+
+    .smallIsland {
+      width: 45% !important;
+    }
+
+    .lpe-dolphin {
+      width: 6% !important;
+    }
+
+    .lpe-whale {
+      width: 6% !important;
+    }
+  }
+}
+
+.lpe-lifemap_wrapper {
+  position: relative;
+  margin: 0 auto;
+
+  .lpe-lifemap_big-island {
+    position: absolute;
+
+    &_outside {
+      .lpe-lifemap_big-island {
+        width: 30%;
+
+        .startIsland {
+          position: relative;
+          display: inline-block;
+          width: 50%;
+        }
+
+        .bigIsland1 {
+          position: relative;
+          width: 100%;
+        }
+
+        .bigIsland2 {
+          position: relative;
+          width: 100%;
+        }
+
+        .bigIsland3 {
+          position: relative;
+          width: 100%;
+        }
+      }
+
+      .smallIsland {
+        position: relative;
+        width: 65%;
+      }
+    }
+  }
+
+  .lpe-lifemap_small-island {
+    position: absolute;
+    width: 15%;
+
+    &_outside {
+      width: 100%;
+
+      .smallIsland {
+        position: relative;
+        width: 100%;
+      }
+    }
+  }
+
+  .lpe-dolphin {
+    width: 10%;
+    position: absolute;
+    bottom: 25%;
+    right: 20%;
+    animation: movingDolphin 4s linear infinite;
+  }
+
+  .lpe-whale {
+    width: 10%;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    animation: movingWhale 4s linear infinite;
+  }
+}
+
+.lpe-lifemap-mobile {
+  display: none;
+}
+
+@media screen and (max-width: 860px) {
+  .lpe-lifemap {
+    display: none;
+  }
+
+  .lpe-lifemap-mobile {
+    display: block;
+
+    .lpe-lifemap_big-island {
+      width: 50%;
+    }
+
+    .lpe-lifemap_small-island {
+      width: 26%;
+
+      .lpe-lifemap_small-island_inside {
+        img {
+          width: 60% !important;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .lpe-lifemap-mobile {
+    display: block;
+
+    .lpe-lifemap_big-island {
+      width: 52%;
+    }
+    .lpe-lifemap_small-island {
+      width: 25%;
+    }
+  }
+}
+
+.lpe-lifemap_small-island_outside,
+.lpe-lifemap_big-island_outside {
+  position: relative;
+
+  .small_sign {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+// Hover Small island
+.small_popup,
+.big_popup {
+  transform: scale(0);
+  position: absolute;
+  transition: all 0.3s;
+  min-width: 200px;
+  min-height: 100px;
+  background-color: #fff;
+  color: #333;
+  z-index: 999 !important;
+  border-radius: 8px;
+  padding: 10px;
+  border: 3px solid #3777bc;
+
+  h4 {
+    font-size: 20px;
+  }
+
+  h6 {
+    font-size: 14px;
+  }
+
+  p {
+    font-size: 13px;
+  }
+
+  &:hover {
+    transform: scale(1);
+  }
+}
+
+.small_popup {
+  // transform: scale(1);
+
+  &.vl {
+    bottom: 100px;
+    left: 140px;
+  }
+
+  &.pa {
+    bottom: 100px;
+    left: 140px;
+  }
+
+  @media screen and (max-width: 1200px) {
+    &.vl {
+      bottom: 50px;
+      left: 110px;
+    }
+
+    &.pa {
+      bottom: 100px;
+      left: 140px;
+    }
+  }
+}
+
+.big_popup {
+  &.start {
+    top: 75%;
+    left: 20%;
+  }
+
+  &.icpc {
+    top: 12%;
+    right: 60%;
+  }
+
+  &.imcpc {
+    top: 16%;
+    left: 0%;
+  }
+
+  &.ittc {
+    top: 77%;
+    left: 20%;
+  }
+}
+
+.small_sign:hover ~ .small_popup {
+  transform: scale(1);
+}
+
+.small_sign {
+  transition: all 0.3s;
+
+  &:hover {
+    -webkit-filter: drop-shadow(-5px -5px 5px #fc9807);
+    filter: drop-shadow(-5px -5px 5px #fc9807);
+  }
+}
+
+// Hover Big island
+.big_popup {
+  min-width: 200px;
+  min-height: 100px;
+
+  &:hover {
+    transform: scale(1);
+  }
+}
+
+.big_sign:hover ~ .big_popup {
+  transform: scale(1);
+}
+
+.big_sign {
+  transition: all 0.3s;
+
+  &:hover {
+    -webkit-filter: drop-shadow(-5px -5px 5px #fc9807);
+    filter: drop-shadow(-5px -5px 5px #fc9807);
+  }
+}
+
+// Modal popup

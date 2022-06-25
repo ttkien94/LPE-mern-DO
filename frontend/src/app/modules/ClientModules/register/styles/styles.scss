@@ -1,0 +1,140 @@
+$p-left: 24px;
+$p-t-b: 10px;
+$border-radius: 10px;
+
+.registerContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #f0f2f5;
+  min-height: 100vh;
+}
+
+.formContainer {
+  background-color: #fff;
+  padding: 10px 20px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  // width: 800px;
+}
+
+.forgetPassword {
+  margin-top: 30px !important;
+}
+
+.positionButton {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.OTPContainer {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+
+  flex-direction: column;
+  background-color: #f0f2f5;
+}
+
+.formContainerOTP {
+  background-color: #fff;
+  padding: $p-t-b 0;
+  border-radius: $border-radius;
+  -webkit-border-radius: $border-radius;
+  -moz-border-radius: $border-radius;
+  -ms-border-radius: $border-radius;
+  -o-border-radius: $border-radius;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.formHeading {
+  padding-top: $p-t-b;
+  padding-bottom: $p-t-b;
+  padding-left: $p-left;
+  text-align: left;
+  border-bottom: 1px solid #d8d8d8;
+  font-weight: bold;
+}
+
+.descText {
+  padding: $p-t-b 0;
+  padding-top: 20px;
+  margin: 0;
+  font-size: 17px;
+  line-height: 20px;
+  text-align: left;
+}
+.wrapperButton {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.containerOtp {
+  display: flex;
+  justify-content: center;
+  padding: 30px 0;
+}
+
+.itemOtp {
+  font-size: 30px;
+  height: 50px;
+  width: 50px !important;
+  margin: 0 10px;
+}
+
+@media screen and (max-width: 800px) {
+  .formContainer {
+    width: unset;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .registerContainer {
+    min-height: unset;
+    width: 100%;
+  }
+
+  .formContainerOTP {
+    padding: 50px 0;
+    min-height: unset;
+    width: 100%;
+    border-radius: unset;
+  }
+  .OTPContainer {
+    height: unset;
+  }
+  .itemOtp {
+    font-size: 25px;
+    height: 40px;
+    width: 40px !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .registerContainer {
+    .MuiFormControl-root {
+      width: 100% !important;
+      margin-top: 20px;
+    }
+  }
+}
+
+.registerBtn {
+  margin-top: 10px !important;
+  background-color: #3777bc !important;
+  color: #fff !important;
+  text-transform: capitalize !important;
+  &:hover {
+    background-color: #448ad5 !important;
+  }
+}

@@ -1,0 +1,353 @@
+.ccs {
+  // default
+  font-size: x-large;
+  background-color: #201572;
+  padding-top: 30px;
+  img {
+    width: 100%;
+  }
+
+  .arrow {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 3px;
+    left: -0px;
+    clip: rect(auto 30px auto 15px);
+
+    &::before {
+      content: "";
+      position: absolute;
+      background-color: rgba(0, 0, 0, 0.7);
+      top: 8px;
+      bottom: 8px;
+      left: 8px;
+      right: 8px;
+      transform: rotate(-45deg);
+      background-image: gradient(
+        linear,
+        color-stop(0.75, #a048b0),
+        color-stop(0, #77d9ff)
+      );
+      border: 1px solid #fff;
+    }
+  }
+
+  .banner {
+    background-image: url("https://lpe.vn/img/ccs/ccs-bgintroduce.png");
+    background-repeat: no-repeat;
+    background-position-y: top;
+    background-size: contain;
+    .row {
+      padding: 30px;
+      background-color: white;
+    }
+    .bannerContent {
+      margin-top: 40px;
+      background-color: #efedee;
+      padding: 20px;
+      border-radius: 10px;
+      h3 {
+        font-weight: bold;
+        background: linear-gradient(
+          to left,
+          #77d9ff,
+          #5b61d1,
+          #a048b0,
+          #a048b0,
+          #5b61d1
+        );
+        background-clip: text;
+        text-fill-color: transparent;
+      }
+      ul {
+        list-style: none;
+      }
+      ul li {
+        position: relative;
+        padding-bottom: 10px;
+        padding-left: 40px;
+      }
+    }
+  }
+
+  .introduce {
+    background: url("https://lpe.vn/img/ccs/ccs-bgmrvas.png");
+    background-repeat: no-repeat;
+    background-position-y: top;
+    background-size: contain;
+    .introduceRight {
+      position: relative;
+      img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+  .timeline {
+    background: url("https://lpe.vn/img/ccs/ccs-bgtimeline.png");
+    background-repeat: no-repeat;
+    background-position-y: top;
+    background-size: contain;
+    .timelineContent {
+      background: white;
+    }
+  }
+  .degree {
+    background: url("https://lpe.vn/img/ccs/ccs-bgdegree.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    padding-bottom: 50px;
+    .degreeContent {
+      background-color: white;
+      padding-bottom: 30px;
+      iframe {
+        width: 100%;
+        height: 70vh;
+      }
+    }
+    .register {
+      background-image: url("https://lpe.vn/img/ccs/ccs-bgregister.png");
+      background-repeat: no-repeat;
+      background-position-y: top;
+      background-size: 100% 100%;
+    }
+    .promotion {
+      background: #6e5db0;
+      margin: 0 5px;
+      border-radius: 30px;
+    }
+  }
+}
+
+.ccs-form.advertisement {
+  width: 60%;
+  margin: 0 auto;
+
+  & > input {
+    width: 100% !important;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .ccs-form.advertisement {
+    width: 100%;
+  }
+}
+
+@media (max-width: 991px) {
+  .ccs .degree .degreeContent {
+    iframe {
+      height: 50vh;
+    }
+  }
+}
+
+// Call button
+.hotline-phone-ring-wrap {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 999999;
+}
+
+.hotline-phone-ring {
+  position: relative;
+  visibility: visible;
+  background-color: transparent;
+  width: 110px;
+  height: 110px;
+  cursor: pointer;
+  z-index: 11;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+  transition: visibility 0.5s;
+  left: 0;
+  bottom: 0;
+  display: block;
+}
+
+.hotline-phone-ring-circle {
+  width: 85px;
+  height: 85px;
+  top: 10px;
+  left: 10px;
+  position: absolute;
+  background-color: transparent;
+  border-radius: 100%;
+  border: 2px solid #0270ad;
+  animation: phonering-alo-circle-anim 1.2s infinite ease-in-out;
+  animation: phonering-alo-circle-anim 1.2s infinite ease-in-out;
+  transition: all 0.5s;
+  transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  opacity: 0.5;
+}
+
+.hotline-phone-ring-circle-fill {
+  width: 55px;
+  height: 55px;
+  top: 25px;
+  left: 25px;
+  position: absolute;
+  background-color: #0270ad;
+  border-radius: 100%;
+  border: 2px solid transparent;
+  animation: phonering-alo-circle-fill-anim 2.3s infinite ease-in-out;
+  animation: phonering-alo-circle-fill-anim 2.3s infinite ease-in-out;
+  transition: all 0.5s;
+  transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+}
+
+.hotline-phone-ring-img-circle {
+  background-color: #0270ad;
+  width: 33px;
+  height: 33px;
+  top: 37px;
+  left: 37px;
+  position: absolute;
+  background-size: 20px;
+  border-radius: 100%;
+  border: 2px solid transparent;
+  animation: phonering-alo-circle-img-anim 1s infinite ease-in-out;
+  animation: phonering-alo-circle-img-anim 1s infinite ease-in-out;
+  transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  display: flex;
+  display: -ms-flexbox;
+  align-items: center;
+  justify-content: center;
+}
+
+.hotline-phone-ring-img-circle .pps-btn-img {
+  display: flex;
+  display: -ms-flexbox;
+}
+
+.hotline-phone-ring-img-circle .pps-btn-img img {
+  width: 20px;
+  height: 20px;
+}
+
+.hotline-bar {
+  position: absolute;
+  background: #0270ad;
+  height: 40px;
+  width: 180px;
+  line-height: 40px;
+  border-radius: 3px;
+  padding: 0 10px;
+  background-size: 100%;
+  cursor: pointer;
+  transition: all 0.8s;
+  transition: all 0.8s;
+  z-index: 9;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 50px !important;
+  /* width: 175px !important; */
+  left: 33px;
+  bottom: 37px;
+}
+
+.hotline-bar > a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: bold;
+  text-indent: 50px;
+  display: block;
+  letter-spacing: 1px;
+  line-height: 40px;
+  font-family: Arial;
+}
+
+.hotline-bar > a:hover,
+.hotline-bar > a:active {
+  color: #fff;
+}
+
+@keyframes phonering-alo-circle-anim {
+  0% {
+    transform: rotate(0) scale(0.5) skew(1deg);
+    opacity: 0.1;
+  }
+  30% {
+    transform: rotate(0) scale(0.7) skew(1deg);
+    opacity: 0.5;
+  }
+  100% {
+    transform: rotate(0) scale(1) skew(1deg);
+    opacity: 0.1;
+  }
+}
+@keyframes phonering-alo-circle-fill-anim {
+  0% {
+    transform: rotate(0) scale(0.7) skew(1deg);
+    opacity: 0.6;
+  }
+  50% {
+    transform: rotate(0) scale(1) skew(1deg);
+    opacity: 0.6;
+  }
+  100% {
+    transform: rotate(0) scale(0.7) skew(1deg);
+    opacity: 0.6;
+  }
+}
+@keyframes phonering-alo-circle-img-anim {
+  0% {
+    transform: rotate(0) scale(1) skew(1deg);
+  }
+  10% {
+    transform: rotate(-25deg) scale(1) skew(1deg);
+  }
+  20% {
+    transform: rotate(25deg) scale(1) skew(1deg);
+  }
+  30% {
+    transform: rotate(-25deg) scale(1) skew(1deg);
+  }
+  40% {
+    transform: rotate(25deg) scale(1) skew(1deg);
+  }
+  50% {
+    transform: rotate(0) scale(1) skew(1deg);
+  }
+  100% {
+    transform: rotate(0) scale(1) skew(1deg);
+  }
+}
+
+@media (max-width: 768px) {
+  .hotline-bar {
+    display: none;
+  }
+}
+
+.fz-small {
+  font-size: 20px;
+}
+
+.loader-ccs {
+  border: 6px solid #f3f3f3; /* Light grey */
+  border-top: 6px solid #201572; /* Blue */
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

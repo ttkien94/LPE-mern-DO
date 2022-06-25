@@ -1,0 +1,624 @@
+$c-gray-4: #e4e4e4;
+$black-text: #333;
+$c-green-1: #84c441;
+$c-blue-0: #103e79;
+
+@keyframes scalePicture {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.3);
+  }
+}
+
+.run-faster {
+  img {
+    margin: auto;
+  }
+}
+.carousel-item {
+  max-width: 100%;
+}
+
+.carousel-img {
+  max-width: 100%;
+  position: relative;
+}
+
+.dark-layout {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #000;
+  opacity: 0.3;
+}
+
+.carousel-text {
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  h1 {
+    font-size: 100px;
+    font-weight: bold;
+    font-family: "Libre Baskerville", serif;
+    letter-spacing: 0.8rem;
+    .text-1 {
+      letter-spacing: 0rem;
+    }
+  }
+
+  p {
+    font-size: 30px;
+    letter-spacing: 1.2rem;
+  }
+
+  .text-2 {
+    font-size: 70px;
+  }
+}
+
+.shadow-text h1 {
+  text-shadow: 3px 4px 7px rgba(0, 0, 0, 0.5) !important;
+}
+
+.shadow-text p {
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8) !important;
+}
+.run-faster {
+  .slick-dots {
+    bottom: 100px;
+  }
+}
+.slick-dots li {
+  width: 50px;
+  margin: 0 10px;
+  transition: all 0.3s;
+}
+.slick-dots li button::before {
+  font-size: 20px;
+  color: #fff;
+  transition: all 0.3s;
+}
+.slick-dots li.slick-active button:before {
+  color: white;
+  transition: all 0.3s;
+}
+
+.video-container {
+  margin: 80px auto;
+}
+.text-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  h2 {
+    font-weight: bold;
+    font-size: 28px;
+    font-family: "Noto Serif", serif;
+    margin-bottom: 20px;
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 1.63;
+    font-kerning: normal;
+    margin: 0 0 2rem;
+  }
+
+  .button-register {
+    padding: 15px 32px;
+    background-color: #f0932b;
+    transition: all 0.3s;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    text-transform: uppercase;
+    color: #fff;
+    border: 1px solid #f0932b;
+    a {
+      text-decoration: none;
+      color: #fff;
+    }
+    &:hover {
+      a {
+        color: #f0932b;
+      }
+      background-color: #fff;
+      border: 1px solid #f0932b;
+      color: #f0932b;
+    }
+  }
+}
+
+.video-content {
+  img {
+    border-radius: 16px;
+  }
+}
+
+.button-play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  transition: all 0.3s;
+
+  i {
+    color: #f1c40f !important;
+  }
+
+  &:hover {
+    &::after {
+      width: 60px;
+      height: 60px;
+    }
+    & i {
+      font-size: 18px;
+    }
+  }
+}
+
+.button-play i {
+  color: #fff;
+  transition: all 0.3s;
+}
+
+.button-play::after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.3s;
+}
+.title {
+  margin: 0;
+  text-align: center;
+  color: #7e7e7e;
+  padding-top: 10px;
+  font-family: sans-serif;
+  font-weight: 700;
+}
+.title-logo {
+  margin: 0 auto;
+  background-color: #f7f7f7;
+  color: #fff;
+}
+
+.intro-clip {
+  background-size: 100% 100%;
+  margin: 0 auto;
+  background-color: #f7f7f7;
+}
+
+.intro-clip_logo {
+  position: relative !important;
+
+  .item-logo-htv {
+    width: 200px;
+    height: 100px;
+    padding: 20px;
+    filter: grayscale(1);
+    transition: all 0.3s;
+    cursor: pointer;
+    &:hover {
+      filter: grayscale(0);
+    }
+  }
+
+  .item-logo-vtv {
+    width: 180px;
+    height: 80px;
+    padding: 20px;
+    filter: grayscale(1);
+    transition: all 0.3s;
+    cursor: pointer;
+
+    &:hover {
+      filter: grayscale(0);
+    }
+  }
+
+  .item-logo-tienphong {
+    width: 180px;
+    height: 80px;
+    padding: 20px;
+    filter: grayscale(1);
+    transition: all 0.3s;
+    cursor: pointer;
+
+    &:hover {
+      filter: grayscale(0);
+    }
+  }
+
+  .item-logo-phunu {
+    width: 180px;
+    height: 80px;
+    padding: 20px;
+    filter: grayscale(1);
+    transition: all 0.3s;
+    cursor: pointer;
+
+    &:hover {
+      filter: grayscale(0);
+    }
+  }
+
+  .item-logo-doanhnhan {
+    width: 180px;
+    height: 80px;
+    padding: 20px;
+    filter: grayscale(1);
+    transition: all 0.3s;
+    cursor: pointer;
+
+    &:hover {
+      filter: grayscale(0);
+    }
+  }
+}
+
+.bg-item {
+  background-image: url("https://lpe.vn/img/lpe/chuong-trinh-huan-luyen/online/run-faster/bgItem.jpg");
+  background-attachment: fixed;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.buttonToggleDay {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+  font-weight: 700;
+  transition: all 0.3s;
+  margin-right: 20px;
+  &.active {
+    transform: scale(1.2);
+    background-color: #f39c12;
+    box-shadow: 0px 0px 24px 0px #f39c12;
+
+    border: 2px solid #f39c12;
+
+    color: #fff;
+  }
+}
+.stepper {
+  display: flex;
+}
+.center-content {
+  justify-content: center;
+}
+.buttonToggleDay:hover {
+  background-color: #f39c12;
+  color: #fff;
+}
+.container-button {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+.text-heading {
+  font-weight: bold;
+  font-size: 50px;
+  font-family: "Noto Serif", serif;
+  text-transform: uppercase;
+  color: #fff;
+  margin-bottom: 32px;
+  text-shadow: 2px 1px 1px #f39c12, 0px -4px 10px #f39c12;
+  display: block !important;
+}
+
+.price {
+  padding-top: 50px;
+  padding-bottom: 80px;
+  background: linear-gradient(45deg, #f39c12, #f1c40f);
+  position: relative;
+}
+
+.bg-adding {
+  background-image: url("https://lpe.vn/img/lpe/chuong-trinh-huan-luyen/online/run-faster/bghocphi.png");
+  width: 100%;
+  height: 120%;
+  position: absolute;
+  bottom: 0;
+}
+
+.review {
+  padding-top: 50px;
+  padding-bottom: 80px;
+  background: #fff;
+}
+.bg-nguoiVuotBao {
+  background-image: url("https://lpe.vn/img/lpe/chuong-trinh-huan-luyen/online/run-faster/bgNguoiVuotBao.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.heading_person {
+  font-weight: bold;
+  font-size: 50px;
+  font-family: "Noto Serif", serif;
+  text-transform: uppercase;
+  margin-bottom: 32px;
+  text-align: center;
+  color: #fff;
+  text-shadow: 5px 6px 7px #f39c12;
+}
+.heading_fee {
+  font-weight: bold;
+  font-size: 50px;
+  font-family: "Noto Serif", serif;
+  text-transform: uppercase;
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.review {
+  .react-multiple-carousel__arrow.react-multiple-carousel__arrow--right {
+    background: rgba(0, 0, 0, 0.3);
+    &:hover {
+      background: rgba(0, 0, 0, 0.7);
+    }
+  }
+
+  .react-multiple-carousel__arrow.react-multiple-carousel__arrow--left {
+    background: rgba(0, 0, 0, 0.3);
+    &:hover {
+      background: rgba(0, 0, 0, 0.7);
+    }
+  }
+}
+.dp-big {
+  display: block;
+}
+
+.dp-small {
+  display: none;
+}
+
+.day-css {
+  color: #fff;
+  font-size: 18px;
+  border-radius: 16px;
+  background: #f39c12;
+  padding: 20px 30px;
+}
+
+.container-vas {
+  border-radius: 16px;
+  padding: 80px 40px;
+  margin: 0;
+  position: relative;
+  margin-top: 120px;
+  margin-bottom: 164px;
+  background: #fff;
+
+  .img-vas {
+    position: absolute;
+    top: -20%;
+    right: -5%;
+    width: 500px;
+  }
+}
+.img-vas_big {
+  display: none;
+}
+.block-day {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapperIcon {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  margin-bottom: 50px;
+  img {
+    width: 50%;
+  }
+  p {
+    margin-top: 10px;
+    font-size: 20px;
+  }
+}
+
+// responsive CODE
+@media screen and (max-width: 1550px) {
+  .carousel-text {
+    h1 {
+      font-size: 70px;
+    }
+    .text-2 {
+      font-size: 45px;
+    }
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .carousel-text {
+    h1 {
+      font-size: 60px;
+    }
+    p {
+      font-size: 25px;
+    }
+    .text-2 {
+      font-size: 40px;
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .container-vas {
+    margin-bottom: 40px;
+    .img-vas {
+      position: absolute;
+      top: -20%;
+      right: -5%;
+      width: 450px;
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .container-vas {
+    margin-bottom: 30px;
+    .img-vas {
+      top: -20%;
+      right: -2%;
+      width: 450px;
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .dp-big {
+    display: none;
+  }
+  .dp-small {
+    display: block;
+    margin: 0 auto;
+  }
+  .carousel-text {
+    h1 {
+      font-size: 55px;
+    }
+    p {
+      font-size: 22px;
+    }
+    .text-2 {
+      font-size: 40px;
+    }
+  }
+  .video-content {
+    margin-top: 50px;
+  }
+  .slick-dots {
+    display: none !important;
+  }
+
+  .container-vas {
+    margin-bottom: 30px;
+    .img-vas {
+      top: -27%;
+      right: -17%;
+      width: 500px;
+    }
+  }
+
+  .wrapper-card {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 929px) {
+  .container-vas {
+    margin-bottom: 30px;
+    .img-vas {
+      top: -14%;
+      right: -10%;
+      width: 450px;
+    }
+  }
+}
+
+@media screen and (max-width: 830px) {
+  .container-vas {
+    margin-bottom: 30px;
+    .img-vas {
+      top: 2%;
+      right: -5%;
+      width: 344px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .img-vas_big {
+    display: block;
+    max-width: 100%;
+  }
+  .container-vas {
+    margin-top: 0px;
+    padding: 40px 20px;
+    .img-vas {
+      display: none;
+    }
+  }
+  .text-heading {
+    font-size: 35px;
+  }
+  .heading_person {
+    font-size: 35px;
+  }
+  .heading_fee {
+    font-size: 35px;
+  }
+  .carousel-item {
+    // height: 80vh;
+  }
+  .carousel-img {
+    // height: 80vh;
+  }
+  .carousel-text {
+    h1 {
+      font-size: 60px;
+    }
+    p {
+      font-size: 20px;
+      letter-spacing: 0.6rem;
+    }
+    .text-2 {
+      font-size: 40px;
+    }
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .carousel-text {
+    h1 {
+      font-size: 35px;
+    }
+    p {
+      font-size: 16px;
+      letter-spacing: 0.5rem;
+    }
+    .text-2 {
+      font-size: 24px;
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) and (min-width: 992px) {
+  .video-content {
+    .button-play {
+      top: 30%;
+      left: 50%;
+    }
+  }
+}

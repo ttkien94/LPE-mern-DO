@@ -1,0 +1,70 @@
+$primary-color: #ee4d2d;
+
+$breakpoints: (
+  "extra-large": 1280px,
+  "medium-large": 1024px,
+  "large": 992px,
+  "medium": 768px,
+  "small": 640px,
+  "extra-small": 480px,
+);
+
+@mixin centerXYPosition {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin responsiveScreen($screen) {
+  //Kiểm tra screen có tồn tại trong breakpoint hay không
+  @if (map-has-key($map: $breakpoints, $key: $screen)) {
+    //Nếu tìm thấy thì lấy giá trị của $screent gán cho $value
+    $value: map-get(
+      $map: $breakpoints,
+      $key: $screen,
+    );
+
+    @media screen and (max-width: $value) {
+      @content;
+    }
+  } @else {
+    @warn 'Screen không tồn tại';
+  }
+}
+
+.rules-page {
+  .heading {
+    text-align: center;
+    color: $primary-color;
+    padding: 50px 0;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+
+  .boxRule {
+    padding: 0 20px;
+    margin-bottom: 50px;
+    cursor: pointer;
+
+    &:hover {
+      h3 {
+        border-top: 5px solid $primary-color;
+        transition: all 0.3s;
+        color: $primary-color;
+      }
+    }
+
+    h3 {
+      border-top: 5px solid transparent;
+
+      margin-bottom: 20px;
+      padding-top: 30px;
+    }
+
+    p {
+      margin-bottom: 20px;
+    }
+  }
+}

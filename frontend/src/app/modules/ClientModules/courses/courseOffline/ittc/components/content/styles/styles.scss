@@ -1,0 +1,42 @@
+.ittc-content {
+  .content-title {
+    padding-bottom: 18px;
+    font-weight: 600 !important;
+    font-size: 20px !important;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #9e9e9e;
+    margin: 0;
+  }
+
+  .box p {
+    color: #333;
+    font-size: 18px;
+    min-height: 100px;
+  }
+
+  .box {
+    color: #333;
+    border-radius: 5px;
+    padding: 30px 20px;
+    margin: 10px 0;
+    background: #fff;
+  }
+
+  img {
+    float: right;
+  }
+
+  @media (max-width: 450px) {
+    .box {
+      min-height: 200px;
+    }
+  }
+
+  @media (max-width: 950px) and (min-width: 450px) {
+    .box {
+      text-align: center;
+      min-height: 180px;
+    }
+  }
+}

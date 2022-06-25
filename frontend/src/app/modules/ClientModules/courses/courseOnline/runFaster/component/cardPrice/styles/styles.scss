@@ -1,0 +1,85 @@
+.cardPrice-container {
+  text-align: center;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  margin-top: 30px;
+  padding: 40px 30px;
+  border-radius: 16px;
+
+  .color-text {
+    text-transform: uppercase;
+    color: #f0932b;
+    font-size: 19px;
+    font-weight: 700;
+    font-family: sans-serif;
+    height: 56px;
+  }
+  .price-text {
+    font-size: 30px;
+    span {
+      font-size: 17px;
+    }
+  }
+  .button-register {
+    margin-top: 50px;
+    background-color: #f39c12;
+    font-size: 18px;
+    padding: 12px 25px;
+    border-radius: 16px;
+    border: none;
+    color: #fff;
+    border: 1px solid #fff;
+
+    transition: all .3s;
+
+    &:hover {
+    background-color: #fff;
+    color: #f39c12;
+    border: 1px solid #f39c12;
+    }
+
+    &.disabled {
+      background-color: #ccc
+      
+    }
+    &.disabled:hover {
+      background-color: #ccc;
+    border: 1px solid #fff;
+    color: #fff;
+
+    }
+  }
+}
+.cardPrice_outOfDate {
+  font-size: 18px;
+  margin: 0;
+  span {
+    font-size: 20px;
+    color: #e74c3c;
+  }
+}
+.null-div {
+  height: 30px;
+}
+
+
+@media screen and (max-width: 1200px) {
+  .null-div {
+    height: 57px;
+  }
+  
+}
+@media screen and (max-width: 992px) {
+  .cardPrice-container {
+    width: 70%;
+  }
+  .null-div {
+    height: 0px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .cardPrice-container {
+    width: 100%;
+  }
+}

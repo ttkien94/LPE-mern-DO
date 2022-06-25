@@ -1,0 +1,45 @@
+.wrapper-menu-admin {
+  .menu-selected {
+    color: rgb(0, 171, 85) !important;
+    font-weight: bold;
+
+    svg {
+      color: rgb(0, 171, 85);
+    }
+
+    li {
+      background: rgba(0, 171, 85, 0.08) !important;
+    }
+  }
+
+  a {
+    color: #333;
+
+    &:hover {
+      color: #999;
+
+      svg {
+        color: #999;
+      }
+
+      & > li {
+        background: rgba(51, 51, 51, 0.08) !important;
+      }
+    }
+  }
+}
+
+.wrapper-single-form {
+  padding: 116px 16px;
+}
+
+.table-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__icon {
+    font-size: 20px;
+    cursor: pointer;
+  }
+}

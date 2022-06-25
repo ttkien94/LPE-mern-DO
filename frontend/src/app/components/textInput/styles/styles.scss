@@ -1,0 +1,31 @@
+.wrapperInput {
+  label {
+    display: flex;
+    font-size: 17px;
+    font-weight: bold;
+  }
+  margin: 15px 0;
+}
+
+.inputClass {
+  border: 1px solid rgb(229, 229, 229);
+
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  font-size: 17px;
+  padding: 14px 16px;
+  width: 100%;
+}
+
+.inputClass:focus-visible {
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  border: 1px solid #4d8dd6;
+  outline: none;
+}
