@@ -6,6 +6,7 @@ import { getBlogListByTopic } from "core/redux/actions/blogAction";
 import { useDispatch, useSelector } from "react-redux";
 
 function ItemList({ data, topicList }) {
+  console.log("data:", data);
   // const { blogListTopicId } = useSelector((state) => state.blog);
   // const dispatch = useDispatch();
   // const GetBlogTopic = () => {

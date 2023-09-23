@@ -21,7 +21,27 @@ function BlogList() {
 
   // selector
   const { topicList } = useSelector((state) => state.topic);
-  const { blogList } = useSelector((state) => state.blog);
+  // const { blogList } = useSelector((state) => state.blog);
+  const blogList = [
+    {
+      url: "",
+      cover: "",
+      topicId: {
+        name: "",
+        des: "",
+      },
+      title: "test",
+    },
+    {
+      url: "",
+      cover: "",
+      topicId: {
+        name: "",
+        des: "",
+      },
+      title: "test2",
+    },
+  ];
   //function
 
   // const getBlogList = (page) => {
