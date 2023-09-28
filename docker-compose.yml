@@ -25,9 +25,9 @@ services:
       # this url mean, when you want to connect to other container inside the container without exposing the port, you need other
       # container service name and port on which it is running
       # - MONGODB_URI=MONGODB_URI=mongodb://root:example@mongoDb:27017/dockerizingMernApplicationTestDB?authSource=admin
-      - MONGODB_URI=mongodb+srv://lpemember:Y7sw8OOYnTOJQf2e@clusterlpe.b49ua.mongodb.net/be_lpe?retryWrites=true&w=majority
+      - MONGODB_URI=mongodb+srv://ttkien94:Kien@@12@cluster0.qygaj.mongodb.net/?retryWrites=true&w=majority
+      # mongodb+srv://lpemember:Y7sw8OOYnTOJQf2e@clusterlpe.b49ua.mongodb.net/be_lpe?retryWrites=true&w=majority
       - CHOKIDAR_USEPOLLING=true #for hot reloading
-
     # depends_on: # don't run untill mongoDb service will not start
     #   - mongoDb
     restart: always
