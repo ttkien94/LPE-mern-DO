@@ -7,7 +7,7 @@ import ErrorPage from "app/modules/Error";
 
 import AutoScroll from "./app/components/autoScroll";
 
-import "react-image-lightbox/style.css";
+// import "react-image-lightbox/style.css";
 import "react-modal-video/scss/modal-video.scss";
 
 import "swiper/swiper-bundle.min.css";
